@@ -23,6 +23,14 @@
         <meta name=twitter:image:src content="image URL here">
         <meta http-equiv=origin-trial content="">
         <link type=image/x-icon rel="shortcut icon" href={{ asset('images/f.ico') }}>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
     <body>
         <div id=ga-track></div>
         <div id=comscore></div>
@@ -41,38 +49,32 @@
                                 <li>
                                     <h3>Quotes by Topic</h3>
                                     <ul class="two-cols clearfix">
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/self ng-click=toggleSideBar() class=ng-binding href=#>Self</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/anger ng-click=toggleSideBar() class=ng-binding href=#>Anger</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/best ng-click=toggleSideBar() class=ng-binding href=#>Best</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/art ng-click=toggleSideBar() class=ng-binding href=#>Art</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/emotions ng-click=toggleSideBar() class=ng-binding href=#>Emotions</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/executives ng-click=toggleSideBar() class=ng-binding href=#>Executives</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/life ng-click=toggleSideBar() class=ng-binding href=#>Life</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/power ng-click=toggleSideBar() class=ng-binding href=#>Power</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/justice ng-click=toggleSideBar() class=ng-binding href=#>Justice</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/education ng-click=toggleSideBar() class=ng-binding href=#>Education</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/wealth ng-click=toggleSideBar() class=ng-binding href=#>Wealth</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/wisdom ng-click=toggleSideBar() class=ng-binding href=#>Wisdom</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/laughter ng-click=toggleSideBar() class=ng-binding href=#>Laughter</a>
-                                        <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a ng-href=theme/greatness ng-click=toggleSideBar() class=ng-binding href=#>Greatness</a>
+                                        @foreach($category as $item)
+                                            <li ng-repeat="item in sidebar_data.contentPositions" class=ng-scope><a class='ng-binding' onclick="mynavfunc()" href="/filter/{{$item->name}}">{{$item->name}}</a>  {{--  --}}
+                                        @endforeach
                                     </ul>
                             </ul>
                         </nav>
                     </div>
                     <div id="mynav" class="right-section anim">
                         <header ng-controller=Header ng-include src=template_path class=ng-scope>
-                            <i class="icn forbesicon-menu ng-scope" onclick="mynavfunc()"></i>
-                            <h1 class="h h1 ng-scope"><a href=# class="a a2"><em class="icn forbesicon-forbes"></em> <strong>Quotes</strong></a> <span class=header-subtitle>
+                            {{-- <i class="fa-solid fa-bars"></i> --}}
+                            <i class="fa-solid fa-bars icn quotes-menu ng-scope" onclick="mynavfunc()"></i>
+                            <h1 class="h h1 ng-scope"><a href=# class="a a2"><em class="icn quotes-forbes"></em> <strong>Quotes</strong></a> <span class=header-subtitle>
 								<!-- Thoughts On The Business Of Life -->
 							</span></h1>
                             <div class=search do-search>
                                 <div class=section_contain>
-                                    <form class="large_input ng-pristine ng-invalid ng-invalid-required" ng-submit=doSearch();>
+                                    <form class="large_input ng-pristine ng-invalid ng-invalid-required" action="/search" method="post" enctype="multipart/form-data">
+                                        @csrf
                                         <div class=input_holder><input type=text name=search ng-model=search_val placeholder=Search required class="ng-pristine ng-untouched ng-invalid ng-invalid-required" value></div>
-                                        <button type=submit class=btn-submit><i class="icn forbesicon-search"></i></button>
+                                        <button type=submit class=btn-submit>
+                                            <i class="fa-solid fa-magnifying-glass icn quotes-search"></i></button>
                                     </form>
                                 </div>
                             </div>
-                            <a href=# class="home-lnk ng-scope"><em class="icn forbesicon-home"></em><span class="home-title sf-hidden"></span></a>
+                            <a href=# class="home-lnk ng-scope">
+                                {{-- <i class="fa-solid fa-house"></i> --}}
+                                <em class="fa-solid fa-house icn quotes-home"></em><span class="home-title sf-hidden"></span></a>
                         </header>
                       

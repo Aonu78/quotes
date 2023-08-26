@@ -8,10 +8,11 @@ class ArtistController extends Controller
 {
     public function index(){
         $artists = Artist::get();
-        return view('artist.testing',['artists'=>$artists]);
+        return view('artist.index',['artists'=>$artists]);
     }
     public function create(){
-        return view('artist.create');
+        $artists = Artist::get();
+        return view('artist.create',['artists'=>$artists]);
     }
     public function store(Request $request){
         //validation
@@ -30,7 +31,7 @@ class ArtistController extends Controller
         $artist->image = $imageName;
 
         $artist->save();
-        return back()->withSuccess('Product Created !!!');
+        return back()->withSuccess('Artist Created !!!');
     }
     public function edit($id){
         $artist = Artist::where('id',$id)->first();
@@ -59,24 +60,24 @@ class ArtistController extends Controller
         return back()->withSuccess('Artist Deleted !!!');
     }
     
-    public function search(Request $request)
-    {
-        if($request->ajax())
-        {
-            $output="";
-            $products=DB::table('artists')->where('name','LIKE','%'.$request->search."%")->get();
-            if($products)
-            {
-            foreach ($products as $product) {
-            $output.='<tr>'.
-            '<td>'.$product->id.'</td>'.
-            '<td>'.$product->name.'</td>'.
-            '<td>'.$product->name.'</td>'.
-            '<td>'.$product->name.'</td>'.
-            '</tr>';
-            }
-            return Response($output);
-            }
-        }
-    }
+    // public function search(Request $request)
+    // {
+    //     if($request->ajax())
+    //     {
+    //         $output="";
+    //         $products=DB::table('artists')->where('name','LIKE','%'.$request->search."%")->get();
+    //         if($products)
+    //         {
+    //         foreach ($products as $product) {
+    //         $output.='<tr>'.
+    //         '<td>'.$product->id.'</td>'.
+    //         '<td>'.$product->name.'</td>'.
+    //         '<td>'.$product->name.'</td>'.
+    //         '<td>'.$product->name.'</td>'.
+    //         '</tr>';
+    //         }
+    //         return Response($output);
+    //         }
+    //     }
+    // }
 }

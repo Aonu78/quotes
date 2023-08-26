@@ -1,19 +1,38 @@
 <?php
 
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\QuotesController;
 use Illuminate\Database\Schema\IndexDefinition;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-Route::get('/', [ArtistController::class,'index'])->name('artist.index');
+Route::get('/', [Controller::class,'index'])->name('index');
 Route::get('/artist/create', [ArtistController::class,'create'])->name('artist.create');
 Route::post('/artist/store', [ArtistController::class,'store'])->name('artist.store');
 Route::get('/artist/{id}/edit', [ArtistController::class,'edit']);
 Route::put('/artist/{id}/update', [ArtistController::class,'update']);
 Route::get('/artist/{id}/delete', [ArtistController::class,'destroy']);
-Route::get('/search',[ArtistController::class,'search']);
+// Route::get('/search',[ArtistController::class,'search']);
 
-// Route::get('/home', function () {return view('home');});
-// Route::get('/{id?}', function (string $id = null) {return "<h1>inserted id : ".$id."</h1>";});
-// Route::get('/',[Controller::class,'findquotes']);
+Route::get('/category/create', [CategoryController::class,'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class,'store'])->name('category.store');
+Route::get('/category/{id}/delete', [CategoryController::class,'destroy']);
+
+Route::get('/quotes/create', [QuotesController::class,'create'])->name('quotes.create');
+Route::post('/quotes/store', [QuotesController::class,'store'])->name('quotes.store');
+Route::get('/quotes/{id}/delete', [QuotesController::class,'destroy']);
+
+Route::get('/filter/{id?}/{quoteid?}', [Controller::class,'categoryfilter']);
+Route::get('/author/{id?}', [Controller::class,'categoryauthor']);
+Route::post('/search', [Controller::class,'search']);
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', [QuotesController::class,'create'])->name('dashboard');
+});
