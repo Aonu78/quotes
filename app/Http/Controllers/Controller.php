@@ -16,23 +16,16 @@ class Controller extends BaseController
 {
     // use AuthorizesRequests, ValidatesRequests;
     public function index(){
-        return view('home',['category'=>category::get(),'quotes'=>quotes::get(),'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Genral"]);
+        $allquotes = quotes::get();
+        return view('index',['category'=>category::get(),'quotes'=>$allquotes->skip(0)->take(50),'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Genral"]);
     }
     public function categoryfilter($id,$quoteid=null){
-        // if ((int)$id) {
-        //     $category = quotes::where('artist',$id)->get();
-        //   } else {
-        //     $category = quotes::where('category',$id)->get();
-        //   }
-        // dd();
-        return view('home',['category'=>category::get(),'quotes'=>quotes::where('category',$id)->get(),'artists'=>Artist::get(),'feature'=>$id,'mainquote'=>quotes::first(),'quoteid'=>quotes::where('id',$quoteid)->first()]);
+        return view('index',['category'=>category::get(),'quotes'=>quotes::where('category',$id)->get(),'artists'=>Artist::get(),'feature'=>$id,'mainquote'=>quotes::first(),'quoteid'=>quotes::where('id',$quoteid)->first()]);
     }
     public function categoryauthor($id){
-        // dd(Request::get('search'));
-        return view('home',['category'=>category::get(),'quotes'=>quotes::where('artist',$id)->get(),'artists'=>Artist::get(),'feature'=>$id,'mainquote'=>quotes::first(),'quoteid'=>null]);
+        return view('index',['category'=>category::get(),'quotes'=>quotes::where('artist',$id)->get(),'artists'=>Artist::get(),'feature'=>$id,'mainquote'=>quotes::first(),'quoteid'=>null]);
     }
     public function search(Request $request){
-        // dd(Request::get('search'));
         $query = Request::get('search');
         if ($query)
         {
@@ -41,7 +34,7 @@ class Controller extends BaseController
                 ->orWhere('category','LIKE', "%$query%")
                 ->paginate(15);
         }
-        return view('home',['category'=>category::get(),'quotes'=>$posts,'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Query"]);
+        return view('index',['category'=>category::get(),'quotes'=>$posts,'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Query"]);
     }
 }
 

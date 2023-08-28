@@ -24,7 +24,7 @@
         <meta http-equiv=origin-trial content="">
         <link type=image/x-icon rel="shortcut icon" href={{ asset('images/f.ico') }}>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
 
@@ -60,7 +60,11 @@
                         <header ng-controller=Header ng-include src=template_path class=ng-scope>
                             {{-- <i class="fa-solid fa-bars"></i> --}}
                             <i class="fa-solid fa-bars icn quotes-menu ng-scope" onclick="mynavfunc()"></i>
-                            <h1 class="h h1 ng-scope"><a href=# class="a a2"><em class="icn quotes-forbes"></em> <strong>Quotes</strong></a> <span class=header-subtitle>
+                            <h1 class="h h1 ng-scope headername"><a href=# class="a a2">
+                                {{-- <i class="fa-solid fa-y"></i> --}}
+                                <em class="fa-solid fa-y fa-o icn "></em><em class="fa-solid fa-o icn "></em> 
+                                <em class="fa-solid fa-u icn "></em><em class="fa-solid fa-r icn "></em> 
+                                <strong>Quotes</strong></a> <span class=header-subtitle>
 								<!-- Thoughts On The Business Of Life -->
 							</span></h1>
                             <div class=search do-search>
@@ -73,8 +77,13 @@
                                     </form>
                                 </div>
                             </div>
-                            <a href=# class="home-lnk ng-scope">
+                            <style>
+                                a > span { visibility: visible; opacity: 1;}
+a:hover > span { visibility: visible; opacity: 0.7;transition: visibility 0s, opacity 0.5s linear;}
+                            </style>
+                            <a href="/" class="home-lnk ng-scope">
                                 {{-- <i class="fa-solid fa-house"></i> --}}
-                                <em class="fa-solid fa-house icn quotes-home"></em><span class="home-title sf-hidden"></span></a>
+                                
+                                <em class="fa-solid fa-house icn quotes-home"></em><span class="home-title sf-hidden">Home.com</span></a>
                         </header>
-                      
+                        

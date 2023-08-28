@@ -1,16 +1,33 @@
 @extends('main')
 @section('quotesofday')
+<script>
+    function CopyFunction(x,y) {
+      // Get the text field
+      var copyText = document.getElementById(x);
+    
+      // Select the text field
+    //   copyText.innerHTML;
+    //   copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.innerHTML);
+      
+      // Alert the copied text
+    //   alert("Copied the text: " + copyText.innerHTML);
+      document.getElementById(y).innerHTML = "Copyed";
+    }
+    </script>
 @if($quoteid)
-<section class="primary-single-thought clearfix anim ng-scope" ng-controller=SingleThought ng-include src=template_path>
-    <div id=leaderboard-singlethought ad-unit=top class="leaderboard-ad homepage ng-scope ng-isolate-scope">
-        <div id=google_ads_iframe_/7175/fdc.forbes/thoughts_4__container__ style="border:0pt none;width:728px;height:0px"></div>
+<section class="primary-single-thought clearfix anim ng-scope">
+    <div class="leaderboard-ad homepage ng-scope ng-isolate-scope">
+        <div style="border:0pt none;width:728px;height:0px"></div>
     </div>
     <section class="thoughts-stream thoughts ng-scope">
-        <div class=section-contain>
-            <blockquote class=bubble>
-                <p class=ng-binding>{{$quoteid->quote}}
+        <div class="section-contain">
+            <blockquote class="fa-solid fa-quote-left bubble">
+                <p class="ng-binding" id="navid">{{$quoteid->quote}}
                 <footer>
-                    <a ng-href=author/william-feather class="author bubble-trail" href="/author/{{$quoteid->artist}}"> 
+                    <a class="author bubble-trail" href="/author/{{$quoteid->artist}}"> 
                         
                         @foreach ($artists as $art)
                     @if($art->name==$quoteid->artist)
@@ -27,19 +44,14 @@
                         
                         <div class=socialize gigya-sharing show-prefix=true>
                         <div class=social-icons>
-                            {{-- <button class="share paddingclass">Copy</button> --}}
-                            {{-- <i class="fa-solid fa-copy "></i> --}}
-                            {{-- <i class="fa-regular fa-copy share" style="font-size: 30px"></i>
-                            <i class="fa-solid fa-share share" style="font-size: 30px"></i>--}}
-                            {{-- <h4 class="share">Share</h4>  --}}
-                            <!-- HTML !-->
-<button class="button-3 share" role="button">Copy</button>
-                            <p class="share paddingclass" style="font-size: 12px">Share To</p>
+<button class="button-3 share" role="button" id="navidbtn" onclick="CopyFunction('navid','navidbtn')">Copy</button>
+                            <p class="share paddingclass" style="font-size: 12px; color: #FD890B;">Share</p>
                             <span class="share">.</span> 
-                            <a><i class="fa-brands fa-facebook icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-twitter icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-linkedin icn" style="color: #24385c;"></i></a>
+<a href="http://www.facebook.com/sharer.php?u={{ url()->current() }}&p[title]={{$quoteid->quote}}"><i class="fa-brands fa-facebook icn" style="color: #1e3150;"></i></a>                            
+<a href="http://twitter.com/share?text={{$quoteid->quote}}&url={{ url()->current() }}"><i class="icon-advanced icn" style=""></i></a> 
+<a href="https://www.instagram.com/shareArticle/?mini=true&url={{ url()->current() }}&title={{$quoteid->quote}}"><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
+<a href="https://api.whatsapp.com/send?text={{ url()->current() }}"><i class="fa-brands fa-whatsapp icn" style="color: #24385c;"></i></a>
+<a href="https://vk.com/share.php?url={{ url()->current() }}&" title="{{$quoteid->quote}}"><i class="fa-brands fa-vk icn" style="color: #24385c;"></i></a>
                         </div>
                     </div>
                 </footer>
@@ -55,22 +67,26 @@
 
     <div class="row">
         @foreach($quotes as $item)
-        @if($loop->index == 5)
+        @if($loop->index == 2)
         @break
         @endif
         <div ng-repeat="thought in reated_theme_thoughts" class="column masonry-brick item thought ng-scope loaded"
             ng-switch=thought.type style=position:relative;left:0px;top:0px>
             <blockquote class="bubble ng-scope" ng-switch-default>
-                <a ng-href=6314 href="/filter/{{$feature}}/{{$item->id}}">
-                    <p class=ng-binding>{{$item->quote}}</p>
+                <a href="/filter/{{$feature}}/{{$item->id}}">
+                    <p class="ng-binding" id="quote-{{$loop->index}}">{{$item->quote}}</p>
                 </a>
-                <div class=socialize gigya-sharing>
-                    <div class=social-icons>
+                <div class="socialize" gigya-sharing>
+                    <div class="social-icons">
+                        <button class="button-3 share" role="button" id="btn-{{$loop->index}}" onclick="CopyFunction('quote-{{$loop->index}}','btn-{{$loop->index}}')">Copy</button>
                         <span class="share">Share </span> 
-                        <a><i class="fa-brands fa-facebook icn" style="color: #24385c;"></i></a> 
-                        <a><i class="fa-brands fa-twitter icn" style="color: #24385c;"></i></a> 
-                        <a><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
-                        <a><i class="fa-brands fa-linkedin icn" style="color: #24385c;"></i></a> 
+
+                        <a href="http://www.facebook.com/sharer.php?u={{url('')}}/filter/{{$feature}}/{{$item->id}}&p[title]={{$item->quote}}"><i class="fa-brands fa-facebook icn" style="color: #1e3150;"></i></a>                            
+                        <a href="http://twitter.com/share?text={{$item->quote}}&url={{url('')}}/filter/{{$feature}}/{{$item->id}}"><i class="icon-advanced icn" style=""></i></a> 
+                        <a href="https://www.instagram.com/shareArticle/?mini=true&url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
+                        <a href="https://api.whatsapp.com/send?text={{$item->quote}}"><i class="fa-brands fa-whatsapp icn" style="color: #24385c;"></i></a>
+                        <a href="https://vk.com/share.php?url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-vk icn" style="color: #24385c;"></i></a>
+                        
                     </div>
                 </div>
                 <footer><a ng-href=author/malcolm-forbes class="author bubble-trail" href="/author/{{$item->artist}}">
@@ -111,10 +127,12 @@
         <div class=socialize gigya-sharing data-showprefix=true>
             <div class=social-icons>
                 <span class="share">Share</span> 
-                <a><i class="fa-brands fa-facebook icn" style="color: white;"></i></a> 
-                <a><i class="fa-brands fa-twitter icn" style="color: white;"></i></a> 
-                <a><i class="fa-brands fa-instagram icn" style="color: white;"></i></a> 
-                <a><i class="fa-brands fa-linkedin icn" style="color: white;"></i></a>
+                <a href="http://www.facebook.com/sharer.php?u={{url('')}}/filter/{{$feature}}/{{$item->id}}&p[title]={{$item->quote}}"><i class="fa-brands fa-facebook icn" style="color: white;"></i></a>                            
+                <a href="http://twitter.com/share?text={{$item->quote}}&url={{url('')}}/filter/{{$feature}}/{{$item->id}}"><i class="icon-advanced-white icn" style="color: white;fill: white;"></i></a> 
+                <a href="https://www.instagram.com/shareArticle/?mini=true&url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-instagram icn" style="color: white;"></i></a> 
+                <a href="https://api.whatsapp.com/send?text={{$item->quote}}"><i class="fa-brands fa-whatsapp icn" style="color: white;"></i></a>
+                <a href="https://vk.com/share.php?url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-vk icn" style="color: white;"></i></a>
+                
             </div>
         </div>
         <footer><a ng-href=author/sir-walter-scott class="author bubble-trail" href=#>

@@ -4,29 +4,40 @@ namespace App\Http\Controllers;
 
 use App\Models\category;
 use Illuminate\Http\Request;
-
+use Auth;
 class CategoryController extends Controller
 {
     public function create(){
-        
-        return view('category.create',['category'=>category::get()]);
+        if (Auth::check()) {
+            return view('category.create',['category'=>category::get()]);
+        } else {
+            return redirect('/login');
+        }
     }
     public function store(Request $request){
-        //validation
-        $request->validate(
-            [
-                'name' => 'required',
-            ]
-            );
-        // store artist to table
+        if (Auth::check()) {
+            //validation
+            $request->validate(
+                [
+                    'name' => 'required',
+                ]
+                );
+            // store artist to table
 
-        $artist = new category;
-        $artist->name = $request->name;
-        $artist->save();
-        return back()->withSuccess('Category Created !!!');
+            $artist = new category;
+            $artist->name = $request->name;
+            $artist->save();
+            return back()->withSuccess('Category Created !!!');
+        } else {
+            return redirect('/login');
+        }
     }
     public function destroy($id){
-        category::where('id',$id)->delete();
-        return back()->withSuccess('Category Deleted !!!');
+        if (Auth::check()) {
+            category::where('id',$id)->delete();
+            return back()->withSuccess('Category Deleted !!!');
+        } else {
+            return redirect('/login');
+        }
     }
 }

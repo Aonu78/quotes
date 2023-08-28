@@ -11,23 +11,25 @@
         @endif
         <div class="row">
             @foreach($quotes as $item)
-            @if($loop->index < 5)
+            @if($loop->index < 2)
         @continue
         @endif
             <div ng-repeat="thought in reated_theme_thoughts" class="column masonry-brick item thought ng-scope loaded"
-                ng-switch=thought.type style=position:relative;left:0px;top:0px>
-                <blockquote class="bubble ng-scope" ng-switch-default>
-                    <a ng-href=6314 href=#>
-                        <p class=ng-binding>{{$item->quote}}</p>
+                style=position:relative;left:0px;top:0px>
+                <blockquote class="bubble ng-scope">
+                    <a href="/filter/{{$feature}}/{{$item->id}}">
+                        <p class="ng-binding" id="quote-{{$loop->index}}">{{$item->quote}}</p>
                     </a>
-                    <div class=socialize gigya-sharing>
-                        <div class=social-icons>
+                    <div class="socialize">
+                        <div class="social-icons">
+<button class="button-3 share" role="button" id="btn-{{$loop->index}}" onclick="CopyFunction('quote-{{$loop->index}}','btn-{{$loop->index}}')">Copy</button>
                             <span class="share hidden sf-hidden">Share </span> 
-                            <a><i class="fa-brands fa-facebook icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-twitter icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
-                            <a><i class="fa-brands fa-linkedin icn" style="color: #24385c;"></i></a>
-                        </div>
+                            <a href="http://www.facebook.com/sharer.php?u={{url('')}}/filter/{{$feature}}/{{$item->id}}&p[title]={{$item->quote}}"><i class="fa-brands fa-facebook icn" style="color: #1e3150;"></i></a>                            
+                            <a href="http://twitter.com/share?text={{$item->quote}}&url={{url('')}}/filter/{{$feature}}/{{$item->id}}"><i class="icon-advanced icn" style=""></i></a> 
+                            <a href="https://www.instagram.com/shareArticle/?mini=true&url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-instagram icn" style="color: #24385c;"></i></a> 
+                            <a href="https://api.whatsapp.com/send?text={{$item->quote}}"><i class="fa-brands fa-whatsapp icn" style="color: #24385c;"></i></a>
+                            <a href="https://vk.com/share.php?url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-vk icn" style="color: #24385c;"></i></a>
+                                                    </div>
                     </div>
                     <footer><a ng-href=author/malcolm-forbes class="author bubble-trail" href=#>
                         @foreach ($artists as $art)

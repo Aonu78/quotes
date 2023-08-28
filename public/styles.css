@@ -1,125 +1,1405 @@
-:root{--sf-img-5: url("images/a1.png");--sf-img-8: url("images/avatar.jpeg");--sf-img-9: url("images/w1.jpeg")}
-a,blockquote,body,cite,div,em,footer,form,h1,h2,h3,header,html,i,iframe,img,li,nav,p,section,small,span,strong,ul{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}blockquote{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:0}footer,header,nav,section{display:block}h1,h2{-webkit-font-smoothing:antialiased}.ng-pristine .ng-invalid-required{box-shadow:none!important}
-/* @font-face{font-family:quotes;src:url(font/font1)format("woff");font-weight:400;font-style:normal} */
-.icn{font-family:quotes;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.quotes-forbes:before{content:""}.quotes-menu:before{content:""}.quotes-search:before{content:""}.quotes-share:before{content:""}
-.quotes-facebook:before{content:"󶁑"}
-.quotes-twitter:before{content:"󶁒"}.quotes-linkedin:before{content:"󶁓"}.quotes-home:before{content:"󶁠"}.a2{text-decoration:none}.p{margin:0;padding:0;-webkit-font-smoothing:antialiased}.p2{font-size:26px}.h{font-size:26px;font-weight:400;-webkit-font-smoothing:antialiased}.h1{text-align:center}.h2{font:400 40px Georgia,Cambria,"Times New Roman",Times,serif;text-align:center;color:#fff;margin:0 0 50px}.h2 p{text-align:center;font:400 18px"Helvetica Neue",Helvetica,Arial,sans-serif;color:#ccc;margin:10px 0 0;text-transform:uppercase}body,html{font-family:Georgia,Arial,sans-serif;height:100%;overflow:hidden}body{min-height:100%;background:#2a2b2c}ul{list-style:none;margin:0;padding:0}li{float:left}a{color:#333;-webkit-tap-highlight-color:rgba(0,0,0,0)}input{outline:0}.scroll{overflow:auto;-webkit-overflow-scrolling:touch}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.anim{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}header{background:#2a2b2c;padding:0 30px;border-bottom:5px solid #fd890b;width:100%;height:80px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}header .h1,header em{font:400 26px/72px Georgia,Cambria,"Times New Roman",Times,serif}header .h1{color:#5c5e60;display:inline-block;position:relative;white-space:nowrap;float:left}header .icn{color:#a9abac;font-size:30px;padding:0 10px 0 0;line-height:65px;float:left;cursor:pointer}header .h1 strong{color:#fff}header strong{float:left}header .header-subtitle{color:#fd890b;margin-left:12px}header 
-.search{background:0 0;float:left;width:29%;padding:0;margin:10px 0 9px 20%}
-header .search .quotes-search{position:absolute;top:-3px;left:5px;bottom:0;right:0}
-header .search .large_input{margin:0}
-header .search .large_input .input_holder input{height:55px;line-height:normal}
-header .search .large_input button{width:55px;height:55px}
-header .search .icn{color:#fff}
-header .search .section_contain{width:100%}
-header .icn.quotes-forbes{font-size:25px;margin:0;padding:0 2px 0 0;line-height:70px}header .home-lnk{float:right}
-header .home-lnk .icn.quotes-home{font-size:46px}
-@media all and (min-width:1025px) and (max-width:1279px){
-    header{padding:0 25px}
-    header .header-subtitle{font-size:21px}
-    header .search{width:30%;margin:16px 0 7px 15%}
-    header .search .quotes-search{top:0;left:5px;line-height:37px}
-    header .search .large_input button{width:40px;height:40px}
-    header .search .quotes-search{font-size:20px}header .home-lnk .icn.quotes-home{line-height:72px;font-size:35px;padding:0}header .search .large_input .input_holder input{height:40px;padding:6px;font-size:20px}header .search .large_input{margin:2px 0 10px 3%}}@media all and (min-width:480px) and (max-width:1024px){header{height:65px;padding:0 0 0 16px}header .h1,header .icn{line-height:55px}header .search{width:29%;margin:8px 0 7px 15%}header .search .quotes-search{top:0;left:5px;line-height:37px}header .search .large_input button{width:40px;height:40px}header .h1,header .icn{font-size:20px}header .search .large_input .input_holder input{height:40px;padding:6px;font-size:20px}header .search .large_input{margin:2px 0 10px 3%}header .icn.quotes-forbes{font-size:18px;margin:0;padding:0 2px 0 0;line-height:53px}header .icn.quotes-home{padding:0}}@media all and (min-width:480px) and (max-width:768px){header .header-subtitle{font-size:16px}header .search{display:none}}@media all and (max-width:479px){header{padding:0 25px;text-align:center;line-height:20px;height:65px}header .search{display:none}header .icn{font-size:25px}header .h1 strong{font-size:20px}header .h1,header .icn{line-height:55px}header span{display:none}header .icn.quotes-home{padding:0}header .icn.quotes-forbes{font-size:18px;margin:0;padding:0 2px 0 0;line-height:53px}}.footer{background:#eee var(--sf-img-5) repeat;border-top:1px solid #fff;padding-bottom:80px}.footer .section_contain{padding:30px}.footer .section_contain strong{font:400 30px Georgia,Cambria,"Times New Roman",Times,serif;color:#666;float:left;margin:0 0 5px}.footer .section_contain small{display:block;font:400 10px"Helvetica Neue",Helvetica,Arial,sans-serif;color:#666;clear:left;text-align:left}.footer .section_contain ul{width:70%;float:right;padding:0;text-align:right;margin:15px 0}.footer .section_contain ul li{display:inline-block;border-left:1px solid #b3b3b3;padding:0 .3em 0 .5em;line-height:10px;margin:0 0 5px}.footer .section_contain ul li:first-child{border:0}.footer .section_contain ul li a{color:#666;text-decoration:none;font:400 12px/12px Georgia,Cambria,"Times New Roman",Times,serif}@media only screen and (max-width:1019px) and (min-width:481px){.footer .section_contain{padding:20px}}@media only screen and (max-width:480px){.footer .section_contain{padding:15px}}.thoughts-stream .item{width:300px;margin:0 0 100px 3%}.thoughts-stream blockquote{position:relative;quotes:"“""”";-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.thoughts-stream blockquote.bubble{background:#fff;border-radius:30px;display:inline-block;padding:30px 30px 40px}.thought-of-day-homepage blockquote:before,.thoughts-stream blockquote:before{color:#8b8f90;content:open-quote;font:400 110px/75px"Helvetica Neue",Helvetica,Arial,sans-serif;height:30px;position:absolute;top:-10px;left:10px}.thoughts-stream blockquote h3.topic{line-height:1em;text-transform:uppercase;position:absolute;top:-5px;right:20px;width:auto}.thoughts-stream blockquote h3.topic a{display:inline-block;background:#fd890b;font:400 12px/28px Verdana,Geneva,sans-serif;text-decoration:none;color:#fff;padding:0 10px;height:28px;border-bottom:2px solid #a15401;border-radius:0 0 5px 5px}.thoughts-stream blockquote p{font:italic normal 20px/1.3em Georgia,Cambria,"Times New Roman",Times,serif;color:#222;vertical-align:middle;display:inline-block;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.thoughts-stream blockquote footer{position:absolute;bottom:-60px}.thoughts-stream .ad-block{min-width:300px;min-height:250px;background-color:#222}.socialize{bottom:8px;right:26px}.socialize .social-icons .icn:before{display:block;speak:none;font-size:24px;border-radius:50%;-webkit-font-smoothing:antialiased}.socialize .social-icons{float:left}
-    .socialize .quotes-facebook{background:#3b5998}
-    .socialize .quotes-facebook:hover{background:#fff}
-    .socialize .quotes-facebook:hover:before{color:#3b5998}
-    .socialize .quotes-twitter{background:#55acee}.socialize .quotes-twitter:hover{background:#fff}.socialize .quotes-twitter:hover:before{color:#55acee}.socialize .quotes-linkedin{background:#0e76a8}.socialize .quotes-linkedin:hover{background:#fff}.socialize .quotes-linkedin:hover:before{color:#0e76a8}.socialize .social-icons .icn{border-radius:50%;color:#fff;cursor:pointer;display:block;font-size:0;margin:0 0 0 3px;position:relative;text-align:center;text-decoration:none;z-index:1;float:left;width:24px;height:24px}@media all and (min-width:768px) and (max-width:1024px){.thoughts-stream{width:650px}}@media all and (max-width:767px){.thoughts-stream{width:320px}.thoughts-stream .ad-block{min-height:50px}}@media all and (max-width:480px){.thoughts-stream .ad-block{display:inline-block;margin:0 0 50px}}.page-content{width:100%;height:100%}.page-container{position:relative;height:100%;width:100%;overflow:hidden}.layout .left-section{position:absolute;background:none repeat scroll 0 0#2A2B2C;color:rgba(255,255,255,.6);top:0;bottom:0;width:265px}.layout .right-section{position:absolute;width:100%;height:100%;background-color:#fff;left:0;-webkit-transition:all .2s;-moz-transition:all .2s;-ms-transition:all .2s;transition:all .2s}.thoughts-menu{width:100%;height:100%;font-size:14px;background:#2a2b2c}.thoughts-menu ul{width:100%;height:100%;padding:0}.thoughts-menu ul li{width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;margin:0}.thoughts-menu ul li h3{font:400 14px"Helvetica Neue",Helvetica,Arial,sans-serif;color:#ccc;text-transform:uppercase;padding:20px}.thoughts-menu ul li ul.two-cols{background:rgba(255,255,255,.05);position:relative;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.thoughts-menu ul li ul.two-cols li{padding:10px 10px 10px 20px;font:400 14px/1.5em"Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;width:50%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.thoughts-menu ul li ul.two-cols li:after{width:100%;content:"";border-bottom:1px solid rgba(0,0,0,.1);position:absolute;bottom:0;left:0}.thoughts-menu ul li ul.two-cols li a{color:#fd890b;text-decoration:none}.thoughts-menu ul li ul.two-cols li a:hover{text-decoration:underline}@media all and (max-width:479px){.thoughts-stream blockquote.bubble{padding:30px 14px 35px}}.primary-single-thought{min-height:650px;padding:0}.primary-single-thought .thoughts-stream{padding-top:0}.primary-single-thought .section-contain{width:100%;display:block;margin:0 auto 50px}.primary-single-thought blockquote.bubble{width:100%;padding:60px 150px;margin:20px auto 100px}.primary-single-thought blockquote.bubble:before{font-size:200px;top:10px}.primary-single-thought blockquote.bubble p{text-align:center;font-size:34px}.primary-single-thought blockquote.bubble footer{bottom:-100px;left:0;padding:0 10%;width:100%;text-align:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.primary-single-thought blockquote.bubble footer a.author{margin:0 0 0 30px;display:inline-block;float:left;white-space:nowrap}.primary-single-thought blockquote.bubble footer a.author:before{width:20px;height:20px;position:absolute;top:auto;right:auto;bottom:75px;left:-40px}.primary-single-thought blockquote.bubble footer a.author:after{width:10px;height:10px;position:absolute;top:auto;right:auto;bottom:65px;left:-20px}.primary-single-thought blockquote.bubble footer a.author img{width:115px;height:115px;display:inline-block;float:none;margin:0 10px 0 0;vertical-align:middle}.primary-single-thought blockquote.bubble footer a.author cite{font-size:20px;line-height:115px}.primary-single-thought blockquote.bubble footer .socialize{line-height:115px;color:#FD890B;vertical-align:middle}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{font-size:36px}.primary-single-thought blockquote.bubble footer .socialize .social-icons{float:left;position:relative;top:-26px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{margin:0 0 0 6px;width:36px;height:36px}@media all and (min-width:768px) and (max-width:1024px){
-      .share{
-        display: none;
-      }
-      .primary-single-thought blockquote.bubble{padding:30px 50px;margin:20px auto 60px}.primary-single-thought blockquote.bubble:before{font-size:175px;top:4px}.primary-single-thought blockquote.bubble footer .socialize{line-height:101px;right:45px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{font-size:24px}.primary-single-thought blockquote.bubble footer .socialize .social-icons{float:left;position:relative;top:-100px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{margin:0 0 0 4px;width:24px;height:24px}}@media all and (min-width:480px) and (max-width:767px){.primary-single-thought .thoughts-stream{width:470px}.primary-single-thought blockquote.bubble{width:100%;padding:30px 50px;margin:20px auto 60px}.primary-single-thought blockquote.bubble:before{font-size:150px;top:0}.primary-single-thought blockquote.bubble p{font-size:30px}
-      .share{
-        display: none;
-      }
-      .primary-single-thought blockquote.bubble footer .socialize{line-height:101px;right:45px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{font-size:24px}.primary-single-thought blockquote.bubble footer .socialize .social-icons{float:left;position:relative;top:-100px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{margin:0 0 0 4px;width:24px;height:24px}}@media all and (max-width:479px){.primary-single-thought .section-contain{margin:50px auto;width:300px}.primary-single-thought blockquote.bubble{width:100%;padding:30px 30px 40px;margin:20px auto}.primary-single-thought blockquote.bubble:before{font-size:100px;top:-12px}.primary-single-thought blockquote.bubble p{font-size:22px}.primary-single-thought blockquote.bubble footer{bottom:-60px;left:-10px}.primary-single-thought blockquote.bubble footer a.author img{width:50px;height:50px}.primary-single-thought blockquote.bubble footer a.author cite{line-height:20px;font-size:12px}.primary-single-thought blockquote.bubble footer a.author:before{width:10px;height:10px;bottom:45px;left:-20px}.primary-single-thought blockquote.bubble footer a.author:after{width:5px;height:5px;bottom:38px;left:-8px}
-      .share{
-        display: none;
-      }
-      .primary-single-thought blockquote.bubble footer .socialize{line-height:101px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{font-size:24px}.primary-single-thought blockquote.bubble footer .socialize .social-icons{float:left;position:relative;top:-60px}.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{margin:0 0 0 4px;width:24px;height:24px}}.related-author h2 a,.related-theme h2 a{color:#FFF;text-decoration:none}.leaderboard-ad{min-height:90px;margin-top:24px;display:inline-block}.socialize{color:#fd890b;font:700 10px"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;position:absolute}.socialize .share{float:left}blockquote footer .author{color:#fff;line-height:50px;text-decoration:none;display:block}.quote-footer .author:after,.quote-footer .author:before,blockquote footer .author:after,blockquote footer .author:before{content:" ";display:table}.quote-footer .author:after,blockquote footer .author:after{clear:both}blockquote footer .author img{border-radius:50%;display:block;float:left;margin:0 10px 0 0;width:50px;height:50px}blockquote footer .author cite{font:700 12px"Helvetica Neue",Helvetica,Arial,sans-serif}blockquote footer .author.bubble-trail{position:relative;margin:0 0 0 15px}blockquote footer .author.bubble-trail:after,blockquote footer .author.bubble-trail:before{content:" ";background:#fff;border-radius:50%;display:block}blockquote footer .author.bubble-trail:after{width:5px;height:5px;position:absolute;bottom:38px;left:-8px}blockquote footer .author.bubble-trail:before{width:10px;height:10px;position:absolute;bottom:45px;left:-20px}@media all and (max-width:479px){.leaderboard-ad{min-height:50px;max-width:320px;overflow:hidden}}.search{position:relative;background:#252627;padding:30px 0}.search .section_contain{width:100%;max-width:980px;display:block;margin-left:auto;margin-right:auto}.search .large_input button{content:"";font-family:thoughts-icons;font-size:20px;width:60px;height:60px}.search input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.search .large_input{margin:0 100px}.search .large_input:after,.search .large_input:before{content:" ";display:table}.search .large_input:after{clear:both}.search .large_input .input_holder{float:right;width:100%}.search .large_input .input_holder input{font:400 26px/60px Georgia,Cambria,"Times New Roman",Times,serif;border:0;border-bottom:3px solid #b3b3b3;border-radius:5px 10px 10px 5px;padding:15px 75px 15px 15px;width:100%;height:60px;line-height:normal}.search .large_input button{background:#fd890b;border:0;border-bottom:3px solid #a15401;border-radius:0 5px 5px 0;color:#fff;float:right;margin-right:-100%;overflow:hidden;position:relative}.search .large_input button:before{content:" ";display:block;background:#fff;border-radius:3px;width:12px;height:12px;position:absolute;top:50%;left:-7px;margin:-6px 0 0;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}@media all and (max-width:479px){.search .large_input{margin:0 10px}}.thoughts{max-width:1024px;margin:50px auto 0}.main-content{position:absolute;text-align:center;bottom:0;left:0;right:0;top:80px;height:100%;background:#353839 var(--sf-img-5) repeat}.thoughts-stream .h2 .author{color:#fd890b}@media all and (max-width:1024px){.main-content{top:65px}}.thought-of-day-category.thought-of-day{padding:30px 0;background:#07384d;box-shadow:inset 0 0 20px 0 rgba(0,0,0,.5);text-align:center;width:100%}.thought-of-day-category.thought-of-day .bubble{width:60%;margin:0 auto}.thought-of-day-category.thought-of-day .p2{display:inline-block;vertical-align:middle;text-align:center;width:80%;color:#fff;position:relative;quotes:"“""”"}.thought-of-day-category.thought-of-day .p2:before{color:#8b8f90;content:open-quote;font:400 110px/75px"Helvetica Neue",Helvetica,Arial,sans-serif;height:30px;position:absolute;top:-15px;left:-40px}.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:after,.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:before{display:none}.thought-of-day-category.thought-of-day footer{width:auto;display:inline-block;text-align:center;float:left}.thought-of-day-category.thought-of-day footer cite{line-height:50px;float:left;color:#fff}.thought-of-day-category.thought-of-day footer .author{float:left;display:inline-block}.thought-of-day-category.thought-of-day footer{margin:6%0 0 6%}.thought-of-day-category.thought-of-day .socialize{color:#FD890B;position:relative;float:right;bottom:0;right:6%;margin-top:6%}.thought-of-day-category.thought-of-day .socialize .share{line-height:36px!important;display:inline-block}.thought-of-day-category.thought-of-day .socialize .share .icn.quotes-share{width:10px!important;height:10px!important;color:#FD890B;display:inline-block;float:none!important;margin:0 3px 0 0}.thought-of-day-category.thought-of-day .socialize .share .icn.quotes-share:before{font-size:10px!important;display:inline-block}.thought-of-day-category.thought-of-day .socialize .social-icons{top:6px}.thought-of-day-category.thought-of-day .socialize .social-icons .icn:before{font-size:36px}.thought-of-day-category.thought-of-day .socialize .social-icons{float:left;position:relative}.thought-of-day-category.thought-of-day .socialize .social-icons .icn{margin:0 0 0 6px;width:36px;height:36px}@media all and (min-width:480px) and (max-width:767px){.thought-of-day-category.thought-of-day .bubble{width:100%}.thought-of-day-category.thought-of-day .socialize .share{display:none!important}}@media all and (max-width:479px){.thought-of-day-category.thought-of-day .socialize{float:none;text-align:center;margin-top:0;right:0}.thought-of-day-category.thought-of-day .socialize .social-icons{display:inline-block;float:none;margin-top:24px}.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:after,.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:before{display:none}.thought-of-day-category.thought-of-day footer{float:none;margin:24px auto 0}.thought-of-day-category.thought-of-day .bubble{width:100%}.thought-of-day-category.thought-of-day .p2:before{left:-25px;font-size:68px}}
-@-webkit-keyframes animate__bfmfD{from{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}to{-webkit-transform:translate(0px,-900px);transform:translate(0px,-900px)}}@keyframes animate__bfmfD{from{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}to{-webkit-transform:translate(0px,-900px);transform:translate(0px,-900px)}}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-transition-delay:9999s;-webkit-transition:background-color 9999s ease-out}input:-webkit-autofill{-webkit-text-fill-color:var(--text-color)!important;-webkit-box-shadow:0 0 0 1000px rgba(0,0,0,0) inset!important}
-.sf-hidden{display:none!important}
-img[src="data:,"],source[src="data:,"]{display:none!important}
-@keyframes svelte-1cj2gr0-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.zephr-sign-in-modal .zephr-modal-content>*{max-width:600px;padding:16px;width:100%}.zephr-sign-in-modal .zephr-modal-content>*:nth-child(2){height:100%;top:20px}@media (max-width:584px){.zephr-sign-in-modal .zephr-modal-content>*{padding:0px;margin-top:15px}.zephr-sign-in-modal .zephr-modal-content>*:nth-child(1){right:8px;top:0px}}
-.column {
-    float: left;
-    width: 25%;
-    /* padding: 50px; */
-    text-align: center;
-    /* font-size: 25px;
-    cursor: pointer;
-    color: white; */
+:root{
+  --sf-img-5: url("images/black-road-texture.jpg");
+  --sf-img-8: url("images/avatar.jpeg");
+  --sf-img-9: url("images/w1.jpeg")
+}
+a,blockquote,body,cite,div,em,footer,form,h1,h2,h3,header,html,i,iframe,img,li,nav,p,section,small,span,strong,ul{
+  margin:0;
+  padding:0;
+  border:0;
+  font:inherit;
+  font-size:100%;
+  vertical-align:baseline
+}
+html{
+  line-height:1
+}
+blockquote{
+  quotes:none
+}
+blockquote:after,blockquote:before,q:after,q:before{
+  content:"";
+  content:none
+}
+a img{
+  border:0
+}
+footer,header,nav,section{
+  display:block
+}
+h1,h2{
+  -webkit-font-smoothing:antialiased
+}
+.ng-pristine .ng-invalid-required{
+  box-shadow:none!important
+}
+/* @font-face{
+  font-family:quotes;
+  src:url(font/font1)format("woff");
+  font-weight:400;
+  font-style:normal
+}
+*/
+.icn{
+  font-family:quotes;
+  speak:none;
+  font-style:normal;
+  font-weight:400;
+  font-variant:normal;
+  text-transform:none;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+.quotes-forbes:before{
+  content:""
+}
+/* .quotes-menu:before{
+  content:""
+}
+*/
+/* .quotes-search:before{
+  content:""
+}
+*/
+/* .quotes-share:before{
+  content:""
+}
+*/
+/* .quotes-facebook:before{
+  content:"󶁑"
+}
+.quotes-twitter:before{
+  content:"󶁒"
+}
+.quotes-linkedin:before{
+  content:"󶁓"
+}
+.quotes-home:before{
+  content:"󶁠"
+}
+*/
+.a2{
+  text-decoration:none
+}
+.p{
+  margin:0;
+  padding:0;
+  -webkit-font-smoothing:antialiased
+}
+.p2{
+  font-size:26px
+}
+.h{
+  font-size:26px;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased
+}
+.h1{
+  text-align:center
+}
+.h2{
+  font:400 40px Georgia,Cambria,"Times New Roman",Times,serif;
+  text-align:center;
+  color:#fff;
+  margin:0 0 50px
+}
+.h2 p{
+  text-align:center;
+  font:400 18px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#ccc;
+  margin:10px 0 0;
+  text-transform:uppercase
+}
+body,html{
+  font-family:Georgia,Arial,sans-serif;
+  height:100%;
+  overflow:hidden
+}
+body{
+  min-height:100%;
+  background:#2a2b2c
+}
+ul{
+  list-style:none;
+  margin:0;
+  padding:0
+}
+li{
+  float:left
+}
+a{
+  color:#333;
+  -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+input{
+  outline:0
+}
+.scroll{
+  overflow:auto;
+  -webkit-overflow-scrolling:touch
+}
+.clearfix:after,.clearfix:before{
+  content:" ";
+  display:table
+}
+.clearfix:after{
+  clear:both
+}
+.anim{
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0)
+}
+header{
+  background:#2a2b2c;
+  padding:0 30px;
+  border-bottom:5px solid #042838;
+  width:100%;
+  height:80px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+header .h1,header em{
+  font:400 26px/72px Georgia,Cambria,"Times New Roman",Times,serif
+}
+header .h1{
+  color:#5c5e60;
+  /* display:inline-block; */
+  position:relative;
+  white-space:nowrap;
+  float:left
+}
+header .icn{
+  color:#a9abac;
+  font-size:20px;
+  padding:0 10px 0 0;
+  line-height:65px;
+  float:left;
+  cursor:pointer
+}
+header .h1 strong{
+  color:#fff
+}
+header strong{
+  float:left
+}
+header .header-subtitle{
+  color:#fd890b;
+  margin-left:12px
+}
+header .search{
+  background:0 0;
+  float:left;
+  width:29%;
+  padding:0;
+  margin:10px 0 9px 20%
+}
+header .search .quotes-search{
+  position:absolute;
+  top:-3px;
+  left:10px;
+  bottom:0;
+  right:0
+}
+header .search .large_input{
+  margin:0
+}
+header .search .large_input .input_holder input{
+  height:55px;
+  line-height:normal
+}
+header .search .large_input button{
+  width:55px;
+  height:55px
+}
+header .search .icn{
+  color:#fff;
+  /* margin-top: -10px; */
+}
+header .search .section_contain{
+  width:100%
+}
+header .icn.quotes-forbes{
+  font-size:25px;
+  margin:0;
+  padding:0 2px 0 0;
+  line-height:70px
+}
+header .home-lnk{
+  float:right
+}
+header .home-lnk .icn.quotes-home{
+  font-size:30px
+}
+@media all and (min-width:1025px) and (max-width:1979px){
+   header{
+      padding:0 25px
   }
-  
-  .containerTab {
-    padding: 20px;
-    color: white;
+   header .header-subtitle{
+      font-size:21px
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+   header .search{
+      width:30%;
+      margin:16px 0 7px 15%
   }
-  .testing-class{
+   header .search .quotes-search{
+      top:0;
+      left:10px;
+      line-height:37px
+  }
+   header .search .large_input button{
+      width:40px;
+      height:40px
+  }
+   header .search .quotes-search{
+      font-size:20px
+  }
+  header .home-lnk .icn.quotes-home{
+      line-height:72px;
+      font-size:35px;
+      padding:0
+  }
+  header .search .large_input .input_holder input{
+      height:40px;
+      padding:6px;
+      font-size:20px
+  }
+  header .search .large_input{
+      margin:2px 0 10px 3%
+  }
+}
+@media all and (min-width:480px) and (max-width:1024px){
+   header{
+      height:65px;
+      padding:0 0 0 16px
+  }
+  header .h1,header .icn{
+      line-height:55px
+  }
+  header .search{
+      width:29%;
+      margin:8px 0 7px 15%
+  }
+   header .search .quotes-search{
+      top:0;
+      left:10px;
+      line-height:37px
+  }
+  header .search .large_input button{
+      width:40px;
+      height:40px
+  }
+  header .h1,header .icn{
+      font-size:20px
+  }
+  header .search .large_input .input_holder input{
+      height:40px;
+      padding:6px;
+      font-size:20px
+  }
+  header .search .large_input{
+      margin:2px 0 10px 3%
+  }
+  header .icn.quotes-forbes{
+      font-size:18px;
+      margin:0;
+      padding:0 2px 0 0;
+      line-height:53px
+  }
+  header .icn.quotes-home{
+      padding:0
+  }
+   .headername{
+       display: none;
+  }
+}
+/* .headername{
+   display: visible;
+}
+*/
+@media all and (min-width:480px) and (max-width:768px){
+  header .header-subtitle{
+      font-size:16px
+  }
+  /* header .search{
+      display:none
+  }
+   */
+}
+@media all and (max-width:479px){
+  header{
+      padding:0 25px;
+      text-align:center;
+      line-height:20px;
+      height:65px
+  }
+  header .search{
+      /* display:none */
+  }
+  .headername{
+    display: none;
+  }
 
+  header .icn{
+      font-size:20px
   }
-  .layout .right-section.expanded {
-    left: 265px;
+  header .h1 strong{
+      font-size:20px
+  }
+  header .h1,header .icn{
+      line-height:55px
+  }
+  header span{
+      display:none
+  }
+  header .icn.quotes-home{
+      padding:0
+  }
+  header .icn.quotes-forbes{
+      font-size:18px;
+      margin:0;
+      padding:0 2px 0 0;
+      line-height:53px
+  }
+}
+/* 479 width: changes search bar */
+header .search .large_input button {
+  width: 47px;
+  height: 43px;
+  left: 40px;
+}
+header .search .large_input .input_holder input {
+  height: 40px;
+  line-height: normal;
+}
+header .search .large_input .input_holder input {
+  height: 41px;
+  line-height: normal;
+  padding: 15px 14px 15px 15px;
+  font: 400 16px/60px Georgia,Cambria,"Times New Roman",Times,serif;
+}
+.search .large_input .input_holder input {
+  padding: 16px 9px 15px 15px;
+}
+
+
+.footer{
+  /* background:#eee var(--sf-img-5) repeat;
+   */
+   border-top:1px solid #fff;
+   padding-bottom:60px;
+   background-color: white;
+}
+.footer .section_contain{
+  padding:30px
+}
+.footer .section_contain strong{
+  font:400 30px Georgia,Cambria,"Times New Roman",Times,serif;
+  color:#666;
+  float:left;
+  margin:0 0 5px
+}
+.footer .section_contain small{
+  display:block;
+  font:400 10px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#666;
+  clear:left;
+  text-align:left
+}
+.footer .section_contain ul{
+  width:70%;
+  float:right;
+  padding:0;
+  text-align:right;
+  margin:15px 0
+}
+.footer .section_contain ul li{
+  display:inline-block;
+  border-left:1px solid #b3b3b3;
+  padding:0 .3em 0 .5em;
+  line-height:10px;
+  margin:0 0 5px
+}
+.footer .section_contain ul li:first-child{
+  border:0
+}
+.footer .section_contain ul li a{
+  color:#666;
+  text-decoration:none;
+  font:400 12px/12px Georgia,Cambria,"Times New Roman",Times,serif
+}
+@media only screen and (max-width:1019px) and (min-width:481px){
+  .footer .section_contain{
+      padding:20px
+  }
+}
+@media only screen and (max-width:480px){
+  .footer .section_contain{
+      padding:15px
+  }
+}
+.thoughts-stream .item{
+  width:300px;
+  margin:0 0 100px 3%
+}
+.thoughts-stream blockquote{
+  position:relative;
+  quotes:"“""”";
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+.thoughts-stream blockquote.bubble{
+  background:#fff;
+  border-radius:30px;
+  display:inline-block;
+  padding:30px 30px 40px
+}
+.thought-of-day-homepage blockquote:before,.thoughts-stream blockquote:before{
+  color:#8b8f90;
+  content:open-quote;
+  font:400 110px/75px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height:30px;
+  position:absolute;
+  top:-10px;
+  left:10px
+}
+.thoughts-stream blockquote h3.topic{
+  line-height:1em;
+  text-transform:uppercase;
+  position:absolute;
+  top:-5px;
+  right:20px;
+  width:auto
+}
+.thoughts-stream blockquote h3.topic a{
+  display:inline-block;
+  background:#fd890b;
+  font:400 12px/28px Verdana,Geneva,sans-serif;
+  text-decoration:none;
+  color:#fff;
+  padding:0 10px;
+  height:28px;
+  border-bottom:2px solid #a15401;
+  border-radius:0 0 5px 5px
+}
+.thoughts-stream blockquote p{
+  font:italic normal 20px/1.3em Georgia,Cambria,"Times New Roman",Times,serif;
+  color:#222;
+  vertical-align:middle;
+  display:inline-block;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+.thoughts-stream blockquote footer{
+  position:absolute;
+  bottom:-60px
+}
+.thoughts-stream .ad-block{
+  min-width:300px;
+  min-height:250px;
+  background-color:#222
+}
+.socialize{
+  bottom:8px;
+  right:26px
+}
+.socialize .social-icons .icn:before{
+  display:block;
+  speak:none;
+  font-size:24px;
+  border-radius:50%;
+  -webkit-font-smoothing:antialiased
+}
+.socialize .social-icons{
+  float:left;
+  margin-bottom: -5px;
+}
+/* .socialize .quotes-facebook{
+  background:#3b5998
+}
+.socialize .quotes-facebook:hover{
+  background:#fff
+}
+.socialize .quotes-facebook:hover:before{
+  color:#3b5998
+}
+.socialize .quotes-twitter{
+  background:#55acee
+}
+.socialize .quotes-twitter:hover{
+  background:#fff
+}
+.socialize .quotes-twitter:hover:before{
+  color:#55acee
+}
+.socialize .quotes-linkedin{
+  background:#0e76a8
+}
+.socialize .quotes-linkedin:hover{
+  background:#fff
+}
+.socialize .quotes-linkedin:hover:before{
+  color:#0e76a8
+}
+*/
+.socialize .social-icons .icn{
+  border-radius:50%;
+  color:#fff;
+  cursor:pointer;
+  display:block;
+  font-size:0;
+  margin:0 0 0 3px;
+  position:relative;
+  text-align:center;
+  text-decoration:none;
+  z-index:1;
+  float:left;
+  width:24px;
+  height:24px
+}
+@media all and (min-width:768px) and (max-width:1024px){
+  .thoughts-stream{
+      width:650px
+  }
+}
+@media all and (max-width:767px){
+  .thoughts-stream{
+      width:320px
+  }
+  .thoughts-stream .ad-block{
+      min-height:50px
+  }
+}
+@media all and (max-width:480px){
+  .thoughts-stream .ad-block{
+      display:inline-block;
+      margin:0 0 50px
+  }
+}
+.page-content{
+  width:100%;
+  height:100%
+}
+.page-container{
+  position:relative;
+  height:100%;
+  width:100%;
+  overflow:hidden
+}
+.layout .left-section{
+  position:absolute;
+  background:none repeat scroll 0 0#2A2B2C;
+  color:rgba(255,255,255,.6);
+  top:0;
+  bottom:0;
+  width:265px
+}
+.layout .right-section{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:#fff;
+  left:0;
+  -webkit-transition:all .2s;
+  -moz-transition:all .2s;
+  -ms-transition:all .2s;
+  transition:all .2s
+}
+.thoughts-menu{
+  width:100%;
+  height:100%;
+  font-size:14px;
+  background:#2a2b2c
+}
+.thoughts-menu ul{
+  width:100%;
+  height:100%;
+  padding:0
+}
+.thoughts-menu ul li{
+  width:100%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  margin:0
+}
+.thoughts-menu ul li h3{
+  font:400 14px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#ccc;
+  text-transform:uppercase;
+  padding:20px
+}
+.thoughts-menu ul li ul.two-cols{
+  background:rgba(255,255,255,.05);
+  position:relative;
+  width:100%;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box
+}
+.thoughts-menu ul li ul.two-cols li{
+  padding:10px 10px 10px 20px;
+  font:400 14px/1.5em"Helvetica Neue",Helvetica,Arial,sans-serif;
+  position:relative;
+  width:50%;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box
+}
+.thoughts-menu ul li ul.two-cols li:after{
+  width:100%;
+  content:"";
+  border-bottom:1px solid rgba(0,0,0,.1);
+  position:absolute;
+  bottom:0;
+  left:0
+}
+.thoughts-menu ul li ul.two-cols li a{
+  color:#fd890b;
+  text-decoration:none
+}
+.thoughts-menu ul li ul.two-cols li a:hover{
+  text-decoration:underline
+}
+@media all and (max-width:479px){
+  .thoughts-stream blockquote.bubble{
+      padding:30px 14px 35px
+  }
+}
+.primary-single-thought{
+  min-height:650px;
+  padding:0
+}
+.primary-single-thought .thoughts-stream{
+  padding-top:0
+}
+.primary-single-thought .section-contain{
+  width:100%;
+  display:block;
+  margin:0 auto 50px
+}
+.primary-single-thought blockquote.bubble{
+  width:100%;
+  padding:60px 150px;
+  margin:20px auto 100px
+}
+.primary-single-thought blockquote.bubble:before{
+  font-size:200px;
+  top:10px
+}
+.primary-single-thought blockquote.bubble p{
+  text-align:center;
+  font-size:34px
+}
+.primary-single-thought blockquote.bubble footer{
+  bottom:-100px;
+  left:0;
+  padding:0 10%;
+  width:100%;
+  text-align:left;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+.primary-single-thought blockquote.bubble footer a.author{
+  margin:0 0 0 30px;
+  display:inline-block;
+  float:left;
+  white-space:nowrap
+}
+.primary-single-thought blockquote.bubble footer a.author:before{
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:auto;
+  right:auto;
+  bottom:75px;
+  left:-40px
+}
+.primary-single-thought blockquote.bubble footer a.author:after{
+  width:10px;
+  height:10px;
+  position:absolute;
+  top:auto;
+  right:auto;
+  bottom:65px;
+  left:-20px
+}
+.primary-single-thought blockquote.bubble footer a.author img{
+  width:115px;
+  height:115px;
+  display:inline-block;
+  float:none;
+  margin:0 10px 0 0;
+  vertical-align:middle
+}
+.primary-single-thought blockquote.bubble footer a.author cite{
+  font-size:20px;
+  line-height:115px
+}
+.primary-single-thought blockquote.bubble footer .socialize{
+  line-height:115px;
+  color:#FD890B;
+  vertical-align:middle
+}
+.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{
+  font-size:36px
+}
+.primary-single-thought blockquote.bubble footer .socialize .social-icons{
+  float:left;
+  position:relative;
+  top:-26px
+}
+.primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{
+  margin:0 0 0 6px;
+  width:36px;
+  height:36px
+}
+@media all and (min-width:768px) and (max-width:1024px){
+   .share{
+       display: none;
+  }
+   .primary-single-thought blockquote.bubble{
+      padding:30px 50px;
+      margin:20px auto 60px
+  }
+  .primary-single-thought blockquote.bubble:before{
+      font-size:175px;
+      top:4px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize{
+      line-height:101px;
+      right:45px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{
+      font-size:24px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons{
+      float:left;
+      position:relative;
+      top:-94px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{
+      margin:0 0 0 4px;
+      width:24px;
+      height:24px
+  }
+}
+@media all and (min-width:480px) and (max-width:767px){
+  .primary-single-thought .thoughts-stream{
+      width:470px
+  }
+  .primary-single-thought blockquote.bubble{
+      width:100%;
+      padding:30px 50px;
+      margin:20px auto 60px
+  }
+  .primary-single-thought blockquote.bubble:before{
+      font-size:150px;
+      top:0
+  }
+  .primary-single-thought blockquote.bubble p{
+      font-size:30px
+  }
+   .share{
+       display: none;
+  }
+   .primary-single-thought blockquote.bubble footer .socialize{
+      line-height:101px;
+      right:45px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{
+      font-size:24px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons{
+      float:left;
+      position:relative;
+      top:-100px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{
+      margin:0 0 0 4px;
+      width:24px;
+      height:24px
+  }
+}
+@media all and (max-width:479px){
+  .primary-single-thought .section-contain{
+      margin:50px auto;
+      width:300px
+  }
+  .primary-single-thought blockquote.bubble{
+      width:100%;
+      padding:30px 30px 40px;
+      margin:20px auto
+  }
+  .primary-single-thought blockquote.bubble:before{
+      font-size:100px;
+      top:-12px
+  }
+  .primary-single-thought blockquote.bubble p{
+      font-size:22px
+  }
+  .primary-single-thought blockquote.bubble footer{
+      bottom:-60px;
+      left:-10px
+  }
+  .primary-single-thought blockquote.bubble footer a.author img{
+      width:50px;
+      height:50px
+  }
+  .primary-single-thought blockquote.bubble footer a.author cite{
+      line-height:20px;
+      font-size:12px
+  }
+  .primary-single-thought blockquote.bubble footer a.author:before{
+      width:10px;
+      height:10px;
+      bottom:45px;
+      left:-20px
+  }
+  .primary-single-thought blockquote.bubble footer a.author:after{
+      width:5px;
+      height:5px;
+      bottom:38px;
+      left:-8px
+  }
+   .share{
+       display: none;
+  }
+   .primary-single-thought blockquote.bubble footer .socialize{
+      line-height:101px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn:before{
+      font-size:24px
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons{
+      float:left;
+      position:relative;
+      top:-60px;
+      right:-20px;
+  }
+  .primary-single-thought blockquote.bubble footer .socialize .social-icons .icn{
+      margin:0 0 0 4px;
+      width:24px;
+      height:24px
+  }
+}
+.related-author h2 a,.related-theme h2 a{
+  color:#FFF;
+  text-decoration:none
+}
+.leaderboard-ad{
+  min-height:90px;
+  margin-top:24px;
+  display:inline-block
+}
+.socialize{
+  color:#fd890b;
+  font:700 10px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform:uppercase;
+  position:absolute
+}
+.socialize .share{
+  float:left
+}
+blockquote footer .author{
+  color:#fff;
+  line-height:50px;
+  text-decoration:none;
+  display:block
+}
+.quote-footer .author:after,.quote-footer .author:before,blockquote footer .author:after,blockquote footer .author:before{
+  content:" ";
+  display:table
+}
+.quote-footer .author:after,blockquote footer .author:after{
+  clear:both
+}
+blockquote footer .author img{
+  border-radius:50%;
+  display:block;
+  float:left;
+  margin:0 10px 0 0;
+  width:50px;
+  height:50px
+}
+blockquote footer .author cite{
+  font:700 12px"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+blockquote footer .author.bubble-trail{
+  position:relative;
+  margin:0 0 0 15px
+}
+blockquote footer .author.bubble-trail:after,blockquote footer .author.bubble-trail:before{
+  content:" ";
+  background:#fff;
+  border-radius:50%;
+  display:block
+}
+blockquote footer .author.bubble-trail:after{
+  width:5px;
+  height:5px;
+  position:absolute;
+  bottom:38px;
+  left:-8px
+}
+blockquote footer .author.bubble-trail:before{
+  width:10px;
+  height:10px;
+  position:absolute;
+  bottom:45px;
+  left:-20px
+}
+@media all and (max-width:479px){
+  .leaderboard-ad{
+      min-height:50px;
+      max-width:320px;
+      overflow:hidden
+  }
+}
+.search{
+  position:relative;
+  background:#252627;
+  padding:30px 0
+}
+.search .section_contain{
+  width:100%;
+  max-width:980px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto
+}
+.search .large_input button{
+  content:"";
+  font-family:thoughts-icons;
+  font-size:20px;
+  width:60px;
+  height:60px
+}
+.search input{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+.search .large_input{
+  margin:0 100px
+}
+.search .large_input:after,.search .large_input:before{
+  content:" ";
+  display:table
+}
+.search .large_input:after{
+  clear:both
+}
+.search .large_input .input_holder{
+  float:right;
+  width:100%
+}
+.search .large_input .input_holder input{
+  font:400 26px/60px Georgia,Cambria,"Times New Roman",Times,serif;
+  border:0;
+  border-bottom:3px solid #b3b3b3;
+  border-radius:5px 10px 10px 5px;
+  padding:15px 75px 15px 15px;
+  width:100%;
+  height:60px;
+  line-height:normal
+}
+.search .large_input button{
+   background:#07384d;
+   border:0;
+   border-bottom:3px solid #042838;
+   border-radius:0 5px 5px 0;
+   color:#fff;
+  float:right;
+  margin-right:-100%;
+  overflow:hidden;
+  position:relative
+}
+.search .large_input button:before{
+  content:" ";
+  display:block;
+  background:#fff;
+  border-radius:3px;
+  width:12px;
+  height:12px;
+  position:absolute;
+  top:50%;
+  left:-7px;
+  margin:-6px 0 0;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg)
+}
+@media all and (max-width:479px){
+  .search .large_input{
+      margin:0 10px
+  }
+}
+.thoughts{
+  max-width:1024px;
+  margin:50px auto 0
+}
+.main-content{
+  position:absolute;
+  text-align:center;
+  bottom:0;
+  left:0;
+  right:0;
+  top:80px;
+  height:100%;
+  background:#353839 var(--sf-img-5) repeat
+}
+.thoughts-stream .h2 .author{
+  color:#fd890b
+}
+@media all and (max-width:1024px){
+  .main-content{
+      top:65px
+  }
+}
+.thought-of-day-category.thought-of-day{
+  padding:30px 0;
+  background:#07384d;
+  box-shadow:inset 0 0 20px 0 rgba(0,0,0,.5);
+  text-align:center;
+  width:100%
+}
+.thought-of-day-category.thought-of-day .bubble{
+  width:60%;
+  margin:0 auto
+}
+.thought-of-day-category.thought-of-day .p2{
+  display:inline-block;
+  vertical-align:middle;
+  text-align:center;
+  width:80%;
+  color:#fff;
+  position:relative;
+  quotes:"“""”"
+}
+.thought-of-day-category.thought-of-day .p2:before{
+  color:#8b8f90;
+  content:open-quote;
+  font:400 110px/75px"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height:30px;
+  position:absolute;
+  top:-15px;
+  left:-40px
+}
+.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:after,.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:before{
+  display:none
+}
+.thought-of-day-category.thought-of-day footer{
+  width:auto;
+  display:inline-block;
+  text-align:center;
+  float:left
+}
+.thought-of-day-category.thought-of-day footer cite{
+  line-height:50px;
+  float:left;
+  color:#fff
+}
+.thought-of-day-category.thought-of-day footer .author{
+  float:left;
+  display:inline-block
+}
+.thought-of-day-category.thought-of-day footer{
+  margin:6%0 0 6%
+}
+.thought-of-day-category.thought-of-day .socialize{
+  color:#FD890B;
+  position:relative;
+  float:right;
+  bottom:0;
+  right:6%;
+  margin-top:6%
+}
+.thought-of-day-category.thought-of-day .socialize .share{
+  line-height:36px!important;
+  display:inline-block
+}
+.thought-of-day-category.thought-of-day .socialize .share .icn.quotes-share{
+  width:10px!important;
+  height:10px!important;
+  color:#FD890B;
+  display:inline-block;
+  float:none!important;
+  margin:0 3px 0 0
+}
+.thought-of-day-category.thought-of-day .socialize .share .icn.quotes-share:before{
+  font-size:10px!important;
+  display:inline-block
+}
+.thought-of-day-category.thought-of-day .socialize .social-icons{
+  top:6px
+}
+.thought-of-day-category.thought-of-day .socialize .social-icons .icn:before{
+  font-size:36px
+}
+.thought-of-day-category.thought-of-day .socialize .social-icons{
+  float:left;
+  position:relative
+}
+.thought-of-day-category.thought-of-day .socialize .social-icons .icn{
+  margin:0 0 0 6px;
+  width:36px;
+  height:36px
+}
+@media all and (min-width:480px) and (max-width:767px){
+  .thought-of-day-category.thought-of-day .bubble{
+      width:100%
+  }
+  .thought-of-day-category.thought-of-day .socialize .share{
+      display:none!important
+  }
+}
+@media all and (max-width:479px){
+  .thought-of-day-category.thought-of-day .socialize{
+      float:none;
+      text-align:center;
+      margin-top:0;
+      right:0
+  }
+  .thought-of-day-category.thought-of-day .socialize .social-icons{
+      display:inline-block;
+      float:none;
+      margin-top:24px
+  }
+  .thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:after,.thought-of-day-category.thought-of-day blockquote footer .author.bubble-trail:before{
+      display:none
+  }
+  .thought-of-day-category.thought-of-day footer{
+      float:none;
+      margin:24px auto 0
+  }
+  .thought-of-day-category.thought-of-day .bubble{
+      width:100%
+  }
+  .thought-of-day-category.thought-of-day .p2:before{
+      left:-25px;
+      font-size:68px
+  }
+}
+@-webkit-keyframes animate__bfmfD{
+  from{
+      -webkit-transform:translate(0px,0px);
+      transform:translate(0px,0px)
+  }
+  to{
+      -webkit-transform:translate(0px,-900px);
+      transform:translate(0px,-900px)
+  }
+}
+@keyframes animate__bfmfD{
+  from{
+      -webkit-transform:translate(0px,0px);
+      transform:translate(0px,0px)
+  }
+  to{
+      -webkit-transform:translate(0px,-900px);
+      transform:translate(0px,-900px)
+  }
+}
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{
+  -webkit-transition-delay:9999s;
+  -webkit-transition:background-color 9999s ease-out
+}
+input:-webkit-autofill{
+  -webkit-text-fill-color:var(--text-color)!important;
+  -webkit-box-shadow:0 0 0 1000px rgba(0,0,0,0) inset!important
+}
+.sf-hidden{
+  display:none!important
+}
+img[src="data:,"],source[src="data:,"]{
+  display:none!important
+}
+@keyframes svelte-1cj2gr0-spin{
+  0%{
+      transform:rotate(0deg)
+  }
+  100%{
+      transform:rotate(360deg)
+  }
+}
+.zephr-sign-in-modal .zephr-modal-content>*{
+  max-width:600px;
+  padding:16px;
+  width:100%
+}
+.zephr-sign-in-modal .zephr-modal-content>*:nth-child(2){
+  height:100%;
+  top:20px
+}
+@media (max-width:584px){
+  .zephr-sign-in-modal .zephr-modal-content>*{
+      padding:0px;
+      margin-top:15px
+  }
+  .zephr-sign-in-modal .zephr-modal-content>*:nth-child(1){
+      right:8px;
+      top:0px
+  }
+}
+.column {
+   float: left;
+   width: 25%;
+  /* padding: 50px;
+   */
+   text-align: center;
+  /* font-size: 25px;
+   cursor: pointer;
+   color: white;
+   */
+}
+.containerTab {
+   padding: 20px;
+   color: white;
+}
+/* Clear floats after the columns */
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+.testing-class{
+}
+.layout .right-section.expanded {
+   left: 265px;
 }
 .paddingclass{
-  margin: 12px 12px 0px 20px;
+   margin: 12px 5px 0px 20px;
 }
-
 /* CSS */
 .button-3 {
-  appearance: none;
-  background-color: #24385c;
-  border: 1px solid rgba(27, 31, 35, .15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 6px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
+   appearance: none;
+   background-color: #24385c;
+   border: 1px solid rgba(27, 31, 35, .15);
+   border-radius: 6px;
+   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   padding: 3px 16px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   white-space: nowrap;
 }
-
 .button-3:focus:not(:focus-visible):not(.focus-visible) {
-  box-shadow: none;
-  outline: none;
+   box-shadow: none;
+   outline: none;
 }
-
 .button-3:hover {
-  background-color: #2c974b;
+   background-color: #2c974b;
 }
-
 .button-3:focus {
-  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-  outline: none;
+   box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+   outline: none;
 }
-
 .button-3:disabled {
-  background-color: #94d3a2;
-  border-color: rgba(27, 31, 35, .1);
-  color: rgba(255, 255, 255, .8);
-  cursor: default;
+   background-color: #94d3a2;
+   border-color: rgba(27, 31, 35, .1);
+   color: rgba(255, 255, 255, .8);
+   cursor: default;
+}
+.button-3:active {
+   background-color: #298e46;
+   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+/* ------------------------------------------------------------- * * Background noise 
+/* ------------------------------------------------------------- */
+.bg-noise {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.bg-noise:before {
+   position: absolute;
+   content: '';
+   top: -10rem;
+   left: -10rem;
+   width: calc(100% + 20rem);
+   height: calc(100% + 20rem);
+   z-index: -1;
+   pointer-events: none;
+   background-image: url(../img/bg-noise.png);
+   background-position: 50%;
+   animation: BgNoise 1s steps(2) infinite;
+}
+@keyframes BgNoise {
+   0% {
+       transform: translate3d(0, 9rem, 0) 
+  }
+   10% {
+       transform: translate3d(-1rem, -4rem, 0) 
+  }
+   20% {
+       transform: translate3d(-8rem, 2rem, 0) 
+  }
+   30% {
+       transform: translate3d(9rem, -9rem, 0) 
+  }
+   40% {
+       transform: translate3d(-2rem, 7rem, 0) 
+  }
+   50% {
+       transform: translate3d(-9rem, -4rem, 0) 
+  }
+   60% {
+       transform: translate3d(2rem, 6rem, 0) 
+  }
+   70% {
+       transform: translate3d(7rem, -8rem, 0) 
+  }
+   80% {
+       transform: translate3d(-9rem, 1rem, 0) 
+  }
+   90% {
+       transform: translate3d(6rem, -5rem, 0) 
+  }
+   to {
+       transform: translate3d(-7rem, 0, 0) 
+  }
 }
 
-.button-3:active {
-  background-color: #298e46;
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+.icon-advanced {
+  background: url('images/x-twitter.svg');
+  background-repeat: no-repeat;
+  background-size: cover; /* stretch the background to cover the whole element */
+
+  display: inline-block;
+  color: #1e3150;
+  height: 20px;
+  width: 20px;
+}
+.icon-advanced-white {
+  background: url('images/x-twitter-white.svg');
+  background-repeat: no-repeat;
+  background-size: cover; /* stretch the background to cover the whole element */
+
+  display: inline-block;
+  color: #1e3150;
+  height: 20px;
+  width: 20px;
 }

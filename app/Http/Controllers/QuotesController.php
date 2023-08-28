@@ -6,30 +6,42 @@ use App\Models\Artist;
 use App\Models\category;
 use App\Models\quotes;
 use Illuminate\Http\Request;
-
+use Auth;
 class QuotesController extends Controller
 {
     public function create(){
-        return view('quotes.create',['quotes'=>quotes::get(),'artists'=>Artist::get(),'category'=>category::get()]);
+        if (Auth::check()) {
+            
+            return view('quotes.create',['quotes'=>quotes::latest()->limit(5)->get(),'artists'=>Artist::get(),'category'=>category::get()]);
+        } else {
+            return redirect('/login');
+        }
     }
     public function store(Request $request){
-        //validation
-        $request->validate(
-            [
-                'quote' => 'required',
-            ]
-            );
-        // store artist to table
-
-        $artist = new quotes;
-        $artist->quote = $request->quote;
-        $artist->artist = $request->artist;
-        $artist->category = $request->category;
-        $artist->save();
-        return back()->withSuccess('Quotes Created !!!');
+        if (Auth::check()) {
+            //validation
+            $request->validate(
+                [
+                    'quote' => 'required',
+                ]
+                );
+            // store artist to table
+            $artist = new quotes;
+            $artist->quote = $request->quote;
+            $artist->artist = $request->artist;
+            $artist->category = $request->category;
+            $artist->save();
+            return back()->withSuccess('Quotes Created !!!');
+        } else {
+            return redirect('/login');
+        }
     }
     public function destroy($id){
-        quotes::where('id',$id)->delete();
-        return back()->withSuccess('Quotes Deleted !!!');
+        if (Auth::check()) {
+            quotes::where('id',$id)->delete();
+            return back()->withSuccess('Quotes Deleted !!!');
+        } else {
+            return redirect('/login');
+        }
     }
 }
