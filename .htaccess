@@ -10,4 +10,8 @@ RewriteCond %{REQUEST_URI} !/public
 RewriteRule ^(.*)$ public/$1 [L]
 # Direct all requests to /public folder
 
+<<<<<<< HEAD
 </IfModule>
+=======
+</IfModule>
+>>>>>>> 3794e15559b97de625da7caa2b32379aafa231c7
