@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OtherpagesController;
 use App\Http\Controllers\QuotesController;
 use Illuminate\Database\Schema\IndexDefinition;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,10 @@ Route::get('/quotes/{id}/delete', [QuotesController::class,'destroy']);
 Route::get('/filter/{id?}/{quoteid?}', [Controller::class,'categoryfilter']);
 Route::get('/author/{id?}', [Controller::class,'categoryauthor']);
 Route::post('/search', [Controller::class,'search']);
+
+Route::get('/term-of-use', [OtherpagesController::class,'terms_of_use']);
+Route::get('/privacy-policy', [OtherpagesController::class,'privacy_policy']);
+Route::get('/about-us', [OtherpagesController::class,'about_us']);
 
 
 Route::middleware([

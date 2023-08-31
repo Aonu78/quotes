@@ -89,16 +89,16 @@
                         
                     </div>
                 </div>
-                <footer><a ng-href=author/malcolm-forbes class="author bubble-trail" href="/author/{{$item->artist}}">
+                <footer><a class="author bubble-trail" href="/author/{{$item->artist}}">
                     @foreach ($artists as $art)
                           
                         @if($art->name==$item->artist)
                         @if($art->image==null)
-                        <img ng-if=thought.thoughtAuthor.image ng-src="/images/avatar.jpeg" class=ng-scope
+                        <img ng-src="/images/avatar.jpeg" class=ng-scope
                             src="/images/avatar.jpeg"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/images/avatar.jpeg')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @else
-                            <img ng-if=thought.thoughtAuthor.image ng-src="\artists\{{$art->image}}" class=ng-scope
+                            <img  ng-src="\artists\{{$art->image}}" class=ng-scope
                             src="\artists\{{$art->image}}"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/artists/{{$art->image}}')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @endif
@@ -117,21 +117,22 @@
 
 <section class="thought-of-day-category thought-of-day clearfix ng-scope" ng-controller=ThoughtOfDay ng-include src=template_path>
     <h2 class="h h2 ng-scope">
-        Forbes Quote Of The Day
-        <p>DAILY WISDOM BROUGHT TO YOU BY FORBES</p>
+        YOUR Quote Of The Day
+        <p>DAILY BROUGHT WISDOM TO YOU BY YourQuotes.Com</p>
     </h2>
     <blockquote class="bubble ng-scope">
         <a href=# class=clearfix>
-            <p class="p p2 ng-binding">{{$mainquote->quote}}</p>
+            <p class="p p2 ng-binding" id="mn-cq-p">{{$mainquote->quote}}</p>
         </a>
         <div class=socialize gigya-sharing data-showprefix=true>
             <div class=social-icons>
+                <button class="button-3 share" role="button" id="btn-mc" onclick="CopyFunction('mn-cq-p','btn-mc')" style="background-color: #2a2b2c">Copy</button>
                 <span class="share">Share</span> 
-                <a href="http://www.facebook.com/sharer.php?u={{url('')}}/filter/{{$feature}}/{{$item->id}}&p[title]={{$item->quote}}"><i class="fa-brands fa-facebook icn" style="color: white;"></i></a>                            
-                <a href="http://twitter.com/share?text={{$item->quote}}&url={{url('')}}/filter/{{$feature}}/{{$item->id}}"><i class="icon-advanced-white icn" style="color: white;fill: white;"></i></a> 
-                <a href="https://www.instagram.com/shareArticle/?mini=true&url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-instagram icn" style="color: white;"></i></a> 
-                <a href="https://api.whatsapp.com/send?text={{$item->quote}}"><i class="fa-brands fa-whatsapp icn" style="color: white;"></i></a>
-                <a href="https://vk.com/share.php?url={{url('')}}/filter/{{$feature}}/{{$item->id}}&title={{$item->quote}}"><i class="fa-brands fa-vk icn" style="color: white;"></i></a>
+                <a href="http://www.facebook.com/sharer.php?u={{url('')}}/filter/{{$feature}}/{{$mainquote->id}}&p[title]={{$mainquote->quote}}"><i class="fa-brands fa-facebook icn" style="color: white;"></i></a>                            
+                <a href="http://twitter.com/share?text={{$mainquote->quote}}&url={{url('')}}/filter/{{$feature}}/{{$mainquote->id}}"><i class="icon-advanced-white icn" style="color: white;fill: white;"></i></a> 
+                <a href="https://www.instagram.com/shareArticle/?mini=true&url={{url('')}}/filter/{{$feature}}/{{$mainquote->id}}&title={{$mainquote->quote}}"><i class="fa-brands fa-instagram icn" style="color: white;"></i></a> 
+                <a href="https://api.whatsapp.com/send?text={{$mainquote->quote}}"><i class="fa-brands fa-whatsapp icn" style="color: white;"></i></a>
+                <a href="https://vk.com/share.php?url={{url('')}}/filter/{{$feature}}/{{$mainquote->id}}&title={{$mainquote->quote}}"><i class="fa-brands fa-vk icn" style="color: white;"></i></a>
                 
             </div>
         </div>
