@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     public function create(){
         if (Auth::check()) {
-            return view('category.create',['category'=>category::get()]);
+            return view('category.create',['category'=>category::latest()->get()]);
         } else {
             return redirect('/login');
         }

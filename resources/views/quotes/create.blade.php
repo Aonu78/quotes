@@ -114,6 +114,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{$quotes->links()}}
     </div>
 
 </div>

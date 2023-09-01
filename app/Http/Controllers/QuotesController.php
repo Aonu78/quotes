@@ -12,7 +12,7 @@ class QuotesController extends Controller
     public function create(){
         if (Auth::check()) {
             
-            return view('quotes.create',['quotes'=>quotes::latest()->limit(50)->get(),'artists'=>Artist::get(),'category'=>category::get()]);
+            return view('quotes.create',['quotes'=>quotes::latest()->paginate(3),'artists'=>Artist::latest()->get(),'category'=>category::latest()->get()]);
         } else {
             return redirect('/login');
         }

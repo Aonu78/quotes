@@ -7,7 +7,7 @@
         <meta name=referrer content=origin>
         <meta name=description content=@yield('description')>
         <meta name=keywords content="quotes, best quotes, daily quotes, famous quotes, great quotes, inspirational quotes, inspiring quotes, life quotes, motivational quotes, positive quotes, quotes about life">
-        <link rel=canonical href=#>
+        <link rel=canonical href=https://yourquotes.pro/>
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name=fragment content=!>
         <meta http-equiv=origin-trial content="">
