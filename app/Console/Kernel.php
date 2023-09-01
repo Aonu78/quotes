@@ -12,7 +12,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+                // runs generate sitemap command in weekdays(Mon-Fri) at 9 am
+                $schedule->command('generate:sitemap')->weekdays()->at('9:00');
+
+                // or run this command for daily routine
+                $schedule->command('generate:sitemap')->daily();
     }
 
     /**

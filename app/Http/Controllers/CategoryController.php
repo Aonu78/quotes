@@ -23,7 +23,8 @@ class CategoryController extends Controller
                 ]
                 );
             // store artist to table
-
+            if(category::where('name',$request->name)->first())
+            {return back()->withSuccess('Already Exist !!!');}
             $artist = new category;
             $artist->name = $request->name;
             $artist->save();

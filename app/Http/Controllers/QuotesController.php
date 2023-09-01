@@ -12,7 +12,7 @@ class QuotesController extends Controller
     public function create(){
         if (Auth::check()) {
             
-            return view('quotes.create',['quotes'=>quotes::latest()->limit(5)->get(),'artists'=>Artist::get(),'category'=>category::get()]);
+            return view('quotes.create',['quotes'=>quotes::latest()->limit(50)->get(),'artists'=>Artist::get(),'category'=>category::get()]);
         } else {
             return redirect('/login');
         }
@@ -26,6 +26,8 @@ class QuotesController extends Controller
                 ]
                 );
             // store artist to table
+            if(quotes::where('quote',$request->quote)->first())
+            {return back()->withSuccess('Already Exist !!!');}
             $artist = new quotes;
             $artist->quote = $request->quote;
             $artist->artist = $request->artist;

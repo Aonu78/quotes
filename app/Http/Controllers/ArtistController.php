@@ -31,6 +31,8 @@ class ArtistController extends Controller
                     // 'image' => 'required|mimes:image,jpg,jpeg,png,gif|max:1000'
                 ]
                 );
+            if(Artist::where('name',$request->name)->first())
+            {return back()->withSuccess('Already Exist !!!');}
             // store artist to table
             if($request->image){
                 $imageName = time().'.'.$request->image->getClientOriginalExtension();

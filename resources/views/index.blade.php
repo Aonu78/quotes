@@ -2,40 +2,32 @@
 @section('quotesofday')
 <script>
     function CopyFunction(x,y) {
-      // Get the text field
       var copyText = document.getElementById(x);
-    
-      // Select the text field
-    //   copyText.innerHTML;
-    //   copyText.setSelectionRange(0, 99999); // For mobile devices
-    
-      // Copy the text inside the text field
       navigator.clipboard.writeText(copyText.innerHTML);
-      
-      // Alert the copied text
-    //   alert("Copied the text: " + copyText.innerHTML);
       document.getElementById(y).innerHTML = "Copyed";
     }
-    </script>
+</script>
 @if($quoteid)
-<section class="primary-single-thought clearfix anim ng-scope">
-    <div class="leaderboard-ad homepage ng-scope ng-isolate-scope">
+@section('title') {{'Quotes & Caption | By '.$quoteid->artist}} @endsection
+@section('description') {{$quoteid->quote}} @endsection
+<section class="primary-single-thought clearfix anim ">
+    <div class="leaderboard-ad homepage  ng-isolate-scope">
         <div style="border:0pt none;width:728px;height:0px"></div>
     </div>
-    <section class="thoughts-stream thoughts ng-scope">
+    <section class="thoughts-stream thoughts ">
         <div class="section-contain">
             <blockquote class="fa-solid fa-quote-left bubble">
-                <p class="ng-binding" id="navid">{{$quoteid->quote}}
+                <p class="" id="navid">{{$quoteid->quote}}
                 <footer>
                     <a class="author bubble-trail" href="/author/{{$quoteid->artist}}"> 
                         
                         @foreach ($artists as $art)
                     @if($art->name==$quoteid->artist)
                         @if($art->image==null)
-                            <img src='\images\avatar.jpeg' class=ng-scope style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=ng-binding>{{$quoteid->artist}}</cite></a>
+                            <img src='\images\avatar.jpeg' class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
 
                         @else
-                            <img src='\artists\{{$art->image}}' class=ng-scope style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=ng-binding>{{$quoteid->artist}}</cite></a>
+                            <img src='\artists\{{$art->image}}' class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
 
                         @endif
                     @endif
@@ -60,21 +52,21 @@
     </section>
 </section>
 @endif
-
-<section class="related-theme thoughts-stream thoughts clearfix" ng-controller=RelatedTheme>
-    <h2 class="h h2 mb-5"><a ng-href=theme/executives href=#>More Quotes on <span
-                class="author ng-binding">{{ $feature ?? 'Genral Category' }}</span></a></h2>
+@section('title') {{'execelent Quotes and Caption for every point of Life.'}} @endsection
+@section('description') {{'YourQuotes.Pro give you execelent Quotes and Caption for every point of Life.'}} @endsection
+<section class="related-theme thoughts-stream thoughts clearfix">
+    <h2 class="h h2 mb-5"><a href=#>More Quotes on <span
+                class="author ">{{ $feature ?? 'Genral Category' }}</span></a></h2>
 
     <div class="row">
         @foreach($quotes as $item)
-        @if($loop->index == 2)
+        @if($loop->index == 5)
         @break
         @endif
-        <div ng-repeat="thought in reated_theme_thoughts" class="column masonry-brick item thought ng-scope loaded"
-            ng-switch=thought.type style=position:relative;left:0px;top:0px>
-            <blockquote class="bubble ng-scope" ng-switch-default>
+        <div  class="column masonry-brick item thought  loaded" style="position:relative;left:0px;top:0px;">
+            <blockquote class="bubble ">
                 <a href="/filter/{{$feature}}/{{$item->id}}">
-                    <p class="ng-binding" id="quote-{{$loop->index}}">{{$item->quote}}</p>
+                    <p class="" id="quote-{{$loop->index}}">{{$item->quote}}</p>
                 </a>
                 <div class="socialize" gigya-sharing>
                     <div class="social-icons">
@@ -94,17 +86,15 @@
                           
                         @if($art->name==$item->artist)
                         @if($art->image==null)
-                        <img ng-src="/images/avatar.jpeg" class=ng-scope
-                            src="/images/avatar.jpeg"
+                        <img class="" src="/images/avatar.jpeg"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/images/avatar.jpeg')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @else
-                            <img  ng-src="\artists\{{$art->image}}" class=ng-scope
-                            src="\artists\{{$art->image}}"
+                            <img class="" src="\artists\{{$art->image}}"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/artists/{{$art->image}}')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @endif
                             @endif
                             @endforeach
-                            <cite class=ng-binding>{{$item->artist}}</cite></a></footer>
+                            <cite class=>{{$item->artist}}</cite></a></footer>
             </blockquote>
         </div>
         
@@ -115,14 +105,14 @@
 
 
 
-<section class="thought-of-day-category thought-of-day clearfix ng-scope" ng-controller=ThoughtOfDay ng-include src=template_path>
-    <h2 class="h h2 ng-scope">
+<section class="thought-of-day-category thought-of-day clearfix ">
+    <h2 class="h h2 ">
         YOUR Quote Of The Day
         <p>DAILY BROUGHT WISDOM TO YOU BY YourQuotes.Com</p>
     </h2>
-    <blockquote class="bubble ng-scope">
+    <blockquote class="bubble ">
         <a href=# class=clearfix>
-            <p class="p p2 ng-binding" id="mn-cq-p">{{$mainquote->quote}}</p>
+            <p class="p p2 " id="mn-cq-p">{{$mainquote->quote}}</p>
         </a>
         <div class=socialize gigya-sharing data-showprefix=true>
             <div class=social-icons>
@@ -136,7 +126,7 @@
                 
             </div>
         </div>
-        <footer><a ng-href=author/sir-walter-scott class="author bubble-trail" href=#>
+        <footer><a class="author bubble-trail" href=#>
                 @foreach ($artists as $art)
                     @if($art->name==$mainquote->artist)
                         @if($art->image==null)
@@ -146,7 +136,7 @@
                         @endif
                     @endif
                 @endforeach
-            <cite class=ng-binding>{{$mainquote->artist}}</cite>
+            <cite class=>{{$mainquote->artist}}</cite>
         </a></footer>
     </blockquote>
 </section>

@@ -4,6 +4,7 @@
   <title>Dash Board</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow" />
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -33,6 +34,11 @@
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link text-light" href="#">{{Auth::user()->name}}</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item" style="float: right;">
+      <a class="nav-link left" href="/category/create">Manage</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto">

@@ -4,6 +4,7 @@ use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OtherpagesController;
 use App\Http\Controllers\QuotesController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Database\Schema\IndexDefinition;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
@@ -33,6 +34,7 @@ Route::get('/term-of-use', [OtherpagesController::class,'terms_of_use']);
 Route::get('/privacy-policy', [OtherpagesController::class,'privacy_policy']);
 Route::get('/about-us', [OtherpagesController::class,'about_us']);
 
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
