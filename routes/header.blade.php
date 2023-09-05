@@ -29,7 +29,7 @@
         <div id=comscore></div>
         <style>
             .shift-right{
-                left: -300px;
+                left: -265px;
             }
             .z-class{
                 z-index: 1;
@@ -68,7 +68,6 @@
                     <style>.right-section1 {
                         position: absolute;
                         right: 0px;
-                        width: 300px !important;
                       }</style>
                     <div id="menu2" class="right-section1 left-section scroll ">
                         <nav class="thoughts-menu ">

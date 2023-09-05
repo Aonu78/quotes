@@ -31,8 +31,7 @@ class Controller extends BaseController
         {
             $posts = quotes::where('artist', 'LIKE', "%$query%")
                 ->orWhere('quote', 'LIKE', "%$query%")
-                ->orWhere('category','LIKE', "%$query%")
-                ->paginate(15);
+                ->orWhere('category','LIKE', "%$query%")->get();
         }
         return view('index',['category'=>category::get(),'quotes'=>$posts,'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Query"]);
     }

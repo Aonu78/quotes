@@ -16,7 +16,7 @@
             <a href="/artist/create" class="btn btn-dark mt-2 m-2">Add Author</a>
         </div>
         <div class="text-right">
-            <a href="/category/create" class="btn btn-dark mt-2">Add Category</a>
+            <a href="/group/create" class="btn btn-dark mt-2">Add Category</a>
         </div>
     </div>
 </div>

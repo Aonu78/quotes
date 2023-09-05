@@ -12,14 +12,14 @@
             <a href="/artist/create" class="btn btn-dark mt-2 m-2">Add Author</a>
         </div>
         <div class="text-right">
-            <a href="/category/create" class="btn btn-dark mt-2">Add Category</a>
+            <a href="/group/create" class="btn btn-dark mt-2">Add Category</a>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-sm-8">
             <div class="card mt-3 p-3">
                 <center><h1>Create Category</h1></center>
-                <form action="/category/store" method="post" enctype="multipart/form-data">
+                <form action="/group/store" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -49,7 +49,7 @@
                         <td><center>
                             {{-- <a href="/category/{{$item->id}}/edit" class="btn btn-success btn-sm">Edit</a> --}}
                             {{-- <a href="artist/{{$item->id}}/delete" class="btn btn-danger">Delete</a> --}}
-                            <form action="/category/{{$item->id}}/delete" class="d-inline">
+                            <form action="/group/{{$item->id}}/delete" class="d-inline">
                                 {{-- @csrf --}}
                                 {{-- @method('delete') --}}
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>

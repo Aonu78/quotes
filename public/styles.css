@@ -174,7 +174,7 @@ header .icn{
   color:#a9abac;
   font-size:20px;
   padding:0 10px 0 0;
-  line-height:65px;
+  line-height:75px;
   float:left;
   cursor:pointer
 }
@@ -183,7 +183,7 @@ header .h1 strong{
 }
 header strong{
   float:left;
-  margin: -4px 10px 0px 0px;
+  /* margin: -4px 10px 0px 0px; */
 }
 ::-webkit-scrollbar{
   width: 6px;
@@ -226,7 +226,7 @@ header .search .large_input button{
 }
 header .search .icn{
   color:#fff;
-  /* margin-top: -10px; */
+  margin-top: -10px;
 }
 header .search .section_contain{
   width:100%
@@ -241,7 +241,10 @@ header .home-lnk{
   float:right
 }
 header .home-lnk .icn.quotes-home{
-  font-size:30px
+  font-size:20px
+}
+.quotes-home{
+  margin-left: 20px;
 }
 @media all and (min-width:1025px) and (max-width:1979px){
    header{
@@ -268,9 +271,16 @@ header .home-lnk .icn.quotes-home{
   }
   header .home-lnk .icn.quotes-home{
       line-height:72px;
-      font-size:35px;
+      font-size:30px;
       padding:0
   }
+  header .icn {
+    font-size:30px;
+  }
+  header .search .icn {
+    color: #fff;
+    margin-top: 0px;
+}
   header .search .large_input .input_holder input{
       height:40px;
       padding:6px;
@@ -286,7 +296,7 @@ header .home-lnk .icn.quotes-home{
       padding:0 0 0 16px
   }
   header .h1,header .icn{
-      line-height:55px
+      line-height:65px
   }
   header .search{
       width:29%;
@@ -297,6 +307,10 @@ header .home-lnk .icn.quotes-home{
       left:10px;
       line-height:37px
   }
+  header .search .icn {
+    color: #fff;
+    margin-top: 0px;
+}
   header .search .large_input button{
       width:40px;
       height:40px
@@ -359,7 +373,7 @@ header .home-lnk .icn.quotes-home{
       font-size:20px
   }
   header .h1,header .icn{
-      line-height:55px
+      line-height:65px
   }
   header span{
       display:none
@@ -605,14 +619,14 @@ header .search .large_input .input_holder input {
   color:rgba(255,255,255,.6);
   top:0;
   bottom:0;
-  width:265px
+  width:300px
 }
 .layout .right-section{
   position:absolute;
   width:100%;
   height:100%;
   background-color:#fff;
-  left:0;
+  /* left:0; */
   -webkit-transition:all .2s;
   -moz-transition:all .2s;
   -ms-transition:all .2s;
@@ -651,7 +665,7 @@ header .search .large_input .input_holder input {
   box-sizing:border-box
 }
 .thoughts-menu ul li ul.two-cols li{
-  padding:10px 10px 10px 20px;
+  padding:7px 5px 5px 10px;
   font:400 14px/1.5em"Helvetica Neue",Helvetica,Arial,sans-serif;
   position:relative;
   width:50%;
@@ -1282,7 +1296,7 @@ img[src="data:,"],source[src="data:,"]{
 .testing-class{
 }
 .layout .right-section.expanded {
-   left: 265px;
+   left: 300px;
 }
 .paddingclass{
    margin: 12px 5px 0px 20px;

@@ -38,7 +38,7 @@
   </ul>
   <ul class="navbar-nav ml-auto">
     <li class="nav-item" style="float: right;">
-      <a class="nav-link left" href="/category/create">Manage</a>
+      <a class="nav-link left" href="/group/create">Manage</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto">

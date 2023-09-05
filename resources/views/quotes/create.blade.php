@@ -6,7 +6,7 @@
             <div class="col-sm-6" style="">
                 <div class="card mt-3 p-3" style="height: 95%;">
                     <center><h3>Create Category</h3></center>
-                    <form action="/category/store" method="post" enctype="multipart/form-data">
+                    <form action="/group/store" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="name">Name</label>

@@ -18,15 +18,15 @@ Route::put('/artist/{id}/update', [ArtistController::class,'update']);
 Route::get('/artist/{id}/delete', [ArtistController::class,'destroy']);
 // Route::get('/search',[ArtistController::class,'search']);
 
-Route::get('/category/create', [CategoryController::class,'create'])->name('category.create');
-Route::post('/category/store', [CategoryController::class,'store'])->name('category.store');
-Route::get('/category/{id}/delete', [CategoryController::class,'destroy']);
+Route::get('/group/create', [CategoryController::class,'create'])->name('category.create');
+Route::post('/group/store', [CategoryController::class,'store'])->name('category.store');
+Route::get('/group/{id}/delete', [CategoryController::class,'destroy']);
 
 Route::get('/quotes/create', [QuotesController::class,'create'])->name('quotes.create');
 Route::post('/quotes/store', [QuotesController::class,'store'])->name('quotes.store');
 Route::get('/quotes/{id}/delete', [QuotesController::class,'destroy']);
 
-Route::get('/filter/{id?}/{quoteid?}', [Controller::class,'categoryfilter']);
+Route::get('/category/{id?}/{quoteid?}', [Controller::class,'categoryfilter']);
 Route::get('/author/{id?}', [Controller::class,'categoryauthor']);
 Route::post('/search', [Controller::class,'search']);
 
