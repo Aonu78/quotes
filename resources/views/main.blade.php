@@ -36,11 +36,11 @@
                               
                             @if($art->name==$item->artist)
                             @if($art->image==null)
-                            <img class=""
+                            <img class="" alt="{{$art->name}}"
                                 src="/images/avatar.jpeg"
                                 style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/images/avatar.jpeg')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                                 @else
-                                <img class=""
+                                <img class="" alt="{{$art->name}}"
                                 src="\artists\{{$art->image}}"
                                 style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/artists/{{$art->image}}')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                                 @endif

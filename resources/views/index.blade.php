@@ -24,10 +24,10 @@
                         @foreach ($artists as $art)
                     @if($art->name==$quoteid->artist)
                         @if($art->image==null)
-                            <img src='\images\avatar.jpeg' class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
+                            <img src='\images\avatar.jpeg' alt="{{$art->name}}" class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
 
                         @else
-                            <img src='\artists\{{$art->image}}' class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
+                            <img src='\artists\{{$art->image}}' alt="{{$art->name}}" class= style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var()!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"> <cite class=>{{$quoteid->artist}}</cite></a>
 
                         @endif
                     @endif
@@ -86,10 +86,10 @@
                           
                         @if($art->name==$item->artist)
                         @if($art->image==null)
-                        <img class="" src="/images/avatar.jpeg"
+                        <img class="" src="/images/avatar.jpeg" alt="{{$art->name}}"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/images/avatar.jpeg')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @else
-                            <img class="" src="\artists\{{$art->image}}"
+                            <img class="" src="\artists\{{$art->image}}" alt="{{$art->name}}"
                             style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:url('/artists/{{$art->image}}')!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
                             @endif
                             @endif
@@ -130,9 +130,9 @@
                 @foreach ($artists as $art)
                     @if($art->name==$mainquote->artist)
                         @if($art->image==null)
-                            <img src="\images\avatar.jpeg"> 
+                            <img src="\images\avatar.jpeg" alt="{{$art->name}}"> 
                         @else
-                            <img src="\artists\{{$art->image}}">
+                            <img src="\artists\{{$art->image}}" alt="{{$art->name}}">
                         @endif
                     @endif
                 @endforeach

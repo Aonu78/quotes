@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html>
+<html lang="en">
     <head>
         <meta charset=utf-8>
         <title>YourQuotes.Pro |@yield('title')</title>
@@ -94,7 +94,9 @@
                                 {{-- <i class="fa-solid fa-y"></i> --}}
                                 <em class="fa-solid fa-y fa-o icn "></em><em class="fa-solid fa-o icn "></em> 
                                 <em class="fa-solid fa-u icn "></em><em class="fa-solid fa-r icn "></em> 
-                                <strong>Quotes</strong></a> <span class=header-subtitle>
+                                <strong>Quotes</strong>
+                                <strong style="color: #2a2b2c;display: none;">By Famous Authors</strong>
+                                </a> <span class=header-subtitle>
 								<!-- Thoughts On The Business Of Life -->
 							</span></h1>
                             <div class="search">

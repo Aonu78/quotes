@@ -17,7 +17,7 @@ class Controller extends BaseController
     // use AuthorizesRequests, ValidatesRequests;
     public function index(){
         $allquotes = quotes::get();
-        return view('index',['category'=>category::get(),'quotes'=>$allquotes->skip(0)->take(50),'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Genral"]);
+        return view('index',['category'=>category::get(),'quotes'=>$allquotes->skip(0)->take(20),'artists'=>Artist::get(),'mainquote'=>quotes::first(),'quoteid'=>null,'feature'=>"Genral"]);
     }
     public function categoryfilter($id,$quoteid=null){
         return view('index',['category'=>category::get(),'quotes'=>quotes::where('category',$id)->get(),'artists'=>Artist::get(),'feature'=>$id,'mainquote'=>quotes::first(),'quoteid'=>quotes::where('id',$quoteid)->first()]);
